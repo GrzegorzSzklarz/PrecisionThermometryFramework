@@ -27,38 +27,40 @@ The framework is designed to be flexible. Your input CSV can use either Western 
 *Replace the path below with your actual image path once uploaded to GitHub.*
 
 <p align="center">
-  <img src="examples/Sensor2_4K_25K_89pts_summary_plots_aic_criterion" width="800" alt="Calibration Residuals Plot">
+  <img src="examples/Sensor2_4K_25K_89pts_summary_plots_aic_criterion.png" width="800" alt="Calibration Residuals Plot">
   <br>
   <em>Example of a generated diagnostic plot showing studentized residuals and optimal model topology.</em>
 </p>
 
 ## 📂 Project Structure
 
-\`\`\`text
-PrecisionThermometryFramework/
-├── data/                       # Input CSV/TDMS calibration datasets
-├── examples/                   # Sample outputs and demonstration plots
-├── interactive_handlers.py     # CLI menus and workflow orchestration
-├── main.py                     # Application entry point
-├── environment.yml             # Conda environment definition
-├── requirements.txt            # Pip dependencies list
-├── .gitignore                  # Git exclusion rules (ignores /results and __pycache__)
-│
-└── fitting_analysis_scripts/   # Core mathematical and analytical backend
-    ├── __init__.py             # Makes the directory a Python package
-    ├── analyzer.py             # Global statistical fitting algorithms
-    ├── data_loader.py          # I/O operations and dataset parsing
-    ├── data_saver.py           # Metrological report structuring & persistence
-    ├── dataset_combiner.py     # Piecewise logic & C0 knot optimization
-    ├── function_defs.py        # Mathematical model libraries
-    ├── its90_calculator.py     # ITS-90 fixed-point & SPRT algorithms
-    ├── logger_setup.py         # Standardized logging for audit trails
-    ├── outlier_analyzer.py     # Statistical anomaly detection (Z-score, Hat Matrix)
-    ├── plotter.py              # Vector graphics and diagnostic plotting
-    ├── rational_function_handler.py # Padé approximant 2D optimization
-    ├── residual_comparator.py  # Cross-validation & dataset comparison
-    └── subset_generator.py     # Data reduction & validation tools
-\`\`\`
+<details>
+  <summary>Click to expand full project structure</summary>
+
+    PrecisionThermometryFramework/
+    ├── data/                        # Input CSV/TDMS calibration datasets
+    ├── examples/                    # Sample outputs and demonstration plots
+    ├── interactive_handlers.py      # CLI menus and workflow orchestration
+    ├── main.py                      # Application entry point
+    ├── environment.yml              # Conda environment definition
+    ├── requirements.txt             # Pip dependencies list
+    ├── .gitignore                   # Git exclusion rules
+    └── fitting_analysis_scripts/    # Core mathematical and analytical backend
+        ├── __init__.py              # Python package marker
+        ├── analyzer.py              # Global statistical fitting algorithms
+        ├── data_loader.py           # I/O operations and dataset parsing
+        ├── data_saver.py            # Metrological report structuring
+        ├── dataset_combiner.py      # Piecewise logic & C0 knot optimization
+        ├── function_defs.py         # Mathematical model libraries
+        ├── its90_calculator.py      # ITS-90 fixed-point & SPRT algorithms
+        ├── logger_setup.py          # Standardized logging for audit trails
+        ├── outlier_analyzer.py      # Anomaly detection (Z-score, Hat Matrix)
+        ├── plotter.py               # Vector graphics & diagnostic plotting
+        ├── rational_function_handler.py # Padé approximant 2D optimization
+        ├── residual_comparator.py    # Cross-validation & comparison
+        └── subset_generator.py      # Data reduction & validation tools
+
+</details>
 
 ## 🚀 Installation
 
