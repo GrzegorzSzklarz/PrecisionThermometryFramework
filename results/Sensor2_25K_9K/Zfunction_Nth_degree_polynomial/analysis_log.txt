@@ -1,0 +1,22 @@
+2026-03-08 21:47:21 - INFO - Max degree for this dataset is dynamically set to 12 (based on N/3 rule and global max).
+2026-03-08 21:47:21 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_best_abs_best_fit.csv
+2026-03-08 21:47:21 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 21:47:22 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_best_abs_35pts_standard_residuals.png
+2026-03-08 21:47:22 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_best_abs_35pts_qq_plot.png
+2026-03-08 21:47:22 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_best_abs_35pts_studentized_residuals.png
+2026-03-08 21:47:23 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_summary_plots.png
+2026-03-08 21:47:23 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 21:47:23 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_35pts_standard_residuals.png
+2026-03-08 21:47:23 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_35pts_qq_plot.png
+2026-03-08 21:47:24 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_35pts_studentized_residuals.png
+2026-03-08 21:47:24 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_statistics.csv
+2026-03-08 21:47:24 - INFO - Parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_35pts_parameters.csv
+2026-03-08 21:47:24 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_25K_9K\Zfunction_Nth_degree_polynomial\Sensor2_25K_9K_35pts_best_fit.csv
+2026-03-08 21:47:24 - INFO - Report created with R_ref=None
+2026-03-08 22:11:06 - INFO - Selected file: Sensor2_4K_25K.csv
+2026-03-08 22:11:06 - INFO - Detected comma separator ','. Using dot '.' as decimal point.
+2026-03-08 22:11:06 - INFO - Data successfully loaded from: c:\users\g.szklarz\onedrive - intibs\direk-t\cryothermframework\data\Sensor2_4K_25K.csv
+2026-03-08 22:11:06 - INFO - Available columns: ['R', 'Rstd', 'T', 'Tstd']
+2026-03-08 22:11:07 - INFO - Successfully loaded 89 points from Sensor2_4K_25K.csv
+2026-03-08 22:11:41 - INFO - Denominator b_0 term is zero: True
+2026-03-08 22:11:41 - INFO - Initialized output directory: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled

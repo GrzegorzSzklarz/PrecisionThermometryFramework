@@ -1,0 +1,1017 @@
+2026-03-08 23:06:37 - INFO - Logger initialized. Log file: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\analysis_log.txt
+2026-03-08 23:06:37 - INFO - Normalization: x_scaled with params: {'choice': 1, 'label': 'x_scaled', 'Rmin': 6.5206792, 'Rmax': 8.9004316}
+2026-03-08 23:06:37 - INFO - b_0 is zero: True
+2026-03-08 23:06:37 - INFO - --- Starting Analysis for Sensor2_4K_25K (89 points) ---
+2026-03-08 23:06:37 - INFO - Global max combined degree is 30. Based on N=89, dynamic limit is 31.
+2026-03-08 23:06:37 - INFO - Effective max combined degree for this scan is set to 30.
+2026-03-08 23:06:56 - INFO - Processing and saving report for n=2...
+2026-03-08 23:06:57 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_89pts_n2_statistics.csv
+2026-03-08 23:06:57 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_89pts_n2_parameters.csv
+2026-03-08 23:06:57 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_89pts_n2_best_fit.csv
+2026-03-08 23:06:57 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_89pts_n2_summary_plots.png
+2026-03-08 23:06:57 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:06:58 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_89pts_n2_89pts_standard_residuals.png
+2026-03-08 23:06:58 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_89pts_n2_89pts_qq_plot.png
+2026-03-08 23:06:58 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_89pts_n2_89pts_studentized_residuals.png
+2026-03-08 23:06:58 - INFO - Processing and saving report for n=3...
+2026-03-08 23:06:58 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_89pts_n3_statistics.csv
+2026-03-08 23:06:58 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_89pts_n3_parameters.csv
+2026-03-08 23:06:58 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_89pts_n3_best_fit.csv
+2026-03-08 23:06:59 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_89pts_n3_summary_plots.png
+2026-03-08 23:06:59 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:06:59 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_89pts_n3_89pts_standard_residuals.png
+2026-03-08 23:06:59 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_89pts_n3_89pts_qq_plot.png
+2026-03-08 23:06:59 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_89pts_n3_89pts_studentized_residuals.png
+2026-03-08 23:06:59 - INFO - Processing and saving report for n=4...
+2026-03-08 23:06:59 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_89pts_n4_statistics.csv
+2026-03-08 23:06:59 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_89pts_n4_parameters.csv
+2026-03-08 23:06:59 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_89pts_n4_best_fit.csv
+2026-03-08 23:07:00 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_89pts_n4_summary_plots.png
+2026-03-08 23:07:00 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:01 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_89pts_n4_89pts_standard_residuals.png
+2026-03-08 23:07:01 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_89pts_n4_89pts_qq_plot.png
+2026-03-08 23:07:01 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_89pts_n4_89pts_studentized_residuals.png
+2026-03-08 23:07:01 - INFO - Processing and saving report for n=5...
+2026-03-08 23:07:01 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_89pts_n5_statistics.csv
+2026-03-08 23:07:01 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_89pts_n5_parameters.csv
+2026-03-08 23:07:01 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_89pts_n5_best_fit.csv
+2026-03-08 23:07:02 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_89pts_n5_summary_plots.png
+2026-03-08 23:07:02 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:02 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_89pts_n5_89pts_standard_residuals.png
+2026-03-08 23:07:02 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_89pts_n5_89pts_qq_plot.png
+2026-03-08 23:07:03 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_89pts_n5_89pts_studentized_residuals.png
+2026-03-08 23:07:03 - INFO - Processing and saving report for n=6...
+2026-03-08 23:07:03 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_89pts_n6_statistics.csv
+2026-03-08 23:07:03 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_89pts_n6_parameters.csv
+2026-03-08 23:07:03 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_89pts_n6_best_fit.csv
+2026-03-08 23:07:03 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_89pts_n6_summary_plots.png
+2026-03-08 23:07:03 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:04 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_89pts_n6_89pts_standard_residuals.png
+2026-03-08 23:07:04 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_89pts_n6_89pts_qq_plot.png
+2026-03-08 23:07:04 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_89pts_n6_89pts_studentized_residuals.png
+2026-03-08 23:07:04 - INFO - Processing and saving report for n=7...
+2026-03-08 23:07:04 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_89pts_n7_statistics.csv
+2026-03-08 23:07:04 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_89pts_n7_parameters.csv
+2026-03-08 23:07:04 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_89pts_n7_best_fit.csv
+2026-03-08 23:07:05 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_89pts_n7_summary_plots.png
+2026-03-08 23:07:05 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:05 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_89pts_n7_89pts_standard_residuals.png
+2026-03-08 23:07:05 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_89pts_n7_89pts_qq_plot.png
+2026-03-08 23:07:06 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_89pts_n7_89pts_studentized_residuals.png
+2026-03-08 23:07:06 - INFO - Processing and saving report for n=8...
+2026-03-08 23:07:06 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_89pts_n8_statistics.csv
+2026-03-08 23:07:06 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_89pts_n8_parameters.csv
+2026-03-08 23:07:06 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_89pts_n8_best_fit.csv
+2026-03-08 23:07:07 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_89pts_n8_summary_plots.png
+2026-03-08 23:07:07 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:07 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_89pts_n8_89pts_standard_residuals.png
+2026-03-08 23:07:07 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_89pts_n8_89pts_qq_plot.png
+2026-03-08 23:07:07 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_89pts_n8_89pts_studentized_residuals.png
+2026-03-08 23:07:07 - INFO - Processing and saving report for n=9...
+2026-03-08 23:07:07 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_89pts_n9_statistics.csv
+2026-03-08 23:07:07 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_89pts_n9_parameters.csv
+2026-03-08 23:07:07 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_89pts_n9_best_fit.csv
+2026-03-08 23:07:08 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_89pts_n9_summary_plots.png
+2026-03-08 23:07:08 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:08 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_89pts_n9_89pts_standard_residuals.png
+2026-03-08 23:07:09 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_89pts_n9_89pts_qq_plot.png
+2026-03-08 23:07:09 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_89pts_n9_89pts_studentized_residuals.png
+2026-03-08 23:07:09 - INFO - Processing and saving report for n=10...
+2026-03-08 23:07:09 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_89pts_n10_statistics.csv
+2026-03-08 23:07:09 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_89pts_n10_parameters.csv
+2026-03-08 23:07:09 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_89pts_n10_best_fit.csv
+2026-03-08 23:07:10 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_89pts_n10_summary_plots.png
+2026-03-08 23:07:10 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:10 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_89pts_n10_89pts_standard_residuals.png
+2026-03-08 23:07:10 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_89pts_n10_89pts_qq_plot.png
+2026-03-08 23:07:10 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_89pts_n10_89pts_studentized_residuals.png
+2026-03-08 23:07:10 - INFO - Processing and saving report for n=11...
+2026-03-08 23:07:10 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_89pts_n11_statistics.csv
+2026-03-08 23:07:10 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_89pts_n11_parameters.csv
+2026-03-08 23:07:10 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_89pts_n11_best_fit.csv
+2026-03-08 23:07:11 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_89pts_n11_summary_plots.png
+2026-03-08 23:07:11 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:11 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_89pts_n11_89pts_standard_residuals.png
+2026-03-08 23:07:12 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_89pts_n11_89pts_qq_plot.png
+2026-03-08 23:07:12 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_89pts_n11_89pts_studentized_residuals.png
+2026-03-08 23:07:12 - INFO - Processing and saving report for n=12...
+2026-03-08 23:07:12 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_89pts_n12_statistics.csv
+2026-03-08 23:07:12 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_89pts_n12_parameters.csv
+2026-03-08 23:07:12 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_89pts_n12_best_fit.csv
+2026-03-08 23:07:13 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_89pts_n12_summary_plots.png
+2026-03-08 23:07:13 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:13 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_89pts_n12_89pts_standard_residuals.png
+2026-03-08 23:07:13 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_89pts_n12_89pts_qq_plot.png
+2026-03-08 23:07:13 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_89pts_n12_89pts_studentized_residuals.png
+2026-03-08 23:07:13 - INFO - Processing and saving report for n=13...
+2026-03-08 23:07:13 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_89pts_n13_statistics.csv
+2026-03-08 23:07:13 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_89pts_n13_parameters.csv
+2026-03-08 23:07:13 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_89pts_n13_best_fit.csv
+2026-03-08 23:07:14 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_89pts_n13_summary_plots.png
+2026-03-08 23:07:14 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:14 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_89pts_n13_89pts_standard_residuals.png
+2026-03-08 23:07:15 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_89pts_n13_89pts_qq_plot.png
+2026-03-08 23:07:15 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_89pts_n13_89pts_studentized_residuals.png
+2026-03-08 23:07:15 - INFO - Processing and saving report for n=14...
+2026-03-08 23:07:15 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_89pts_n14_statistics.csv
+2026-03-08 23:07:15 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_89pts_n14_parameters.csv
+2026-03-08 23:07:15 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_89pts_n14_best_fit.csv
+2026-03-08 23:07:16 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_89pts_n14_summary_plots.png
+2026-03-08 23:07:16 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:16 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_89pts_n14_89pts_standard_residuals.png
+2026-03-08 23:07:16 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_89pts_n14_89pts_qq_plot.png
+2026-03-08 23:07:17 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_89pts_n14_89pts_studentized_residuals.png
+2026-03-08 23:07:17 - INFO - Processing and saving report for n=15...
+2026-03-08 23:07:17 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_89pts_n15_statistics.csv
+2026-03-08 23:07:17 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_89pts_n15_parameters.csv
+2026-03-08 23:07:17 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_89pts_n15_best_fit.csv
+2026-03-08 23:07:17 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_89pts_n15_summary_plots.png
+2026-03-08 23:07:17 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:18 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_89pts_n15_89pts_standard_residuals.png
+2026-03-08 23:07:18 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_89pts_n15_89pts_qq_plot.png
+2026-03-08 23:07:18 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_89pts_n15_89pts_studentized_residuals.png
+2026-03-08 23:07:18 - INFO - Processing and saving report for n=16...
+2026-03-08 23:07:18 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_89pts_n16_statistics.csv
+2026-03-08 23:07:18 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_89pts_n16_parameters.csv
+2026-03-08 23:07:18 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_89pts_n16_best_fit.csv
+2026-03-08 23:07:19 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_89pts_n16_summary_plots.png
+2026-03-08 23:07:19 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:19 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_89pts_n16_89pts_standard_residuals.png
+2026-03-08 23:07:19 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_89pts_n16_89pts_qq_plot.png
+2026-03-08 23:07:20 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_89pts_n16_89pts_studentized_residuals.png
+2026-03-08 23:07:20 - INFO - Processing and saving report for n=17...
+2026-03-08 23:07:20 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_89pts_n17_statistics.csv
+2026-03-08 23:07:20 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_89pts_n17_parameters.csv
+2026-03-08 23:07:20 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_89pts_n17_best_fit.csv
+2026-03-08 23:07:21 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_89pts_n17_summary_plots.png
+2026-03-08 23:07:21 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:21 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_89pts_n17_89pts_standard_residuals.png
+2026-03-08 23:07:21 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_89pts_n17_89pts_qq_plot.png
+2026-03-08 23:07:21 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_89pts_n17_89pts_studentized_residuals.png
+2026-03-08 23:07:21 - INFO - Processing and saving report for n=18...
+2026-03-08 23:07:21 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_89pts_n18_statistics.csv
+2026-03-08 23:07:21 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_89pts_n18_parameters.csv
+2026-03-08 23:07:21 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_89pts_n18_best_fit.csv
+2026-03-08 23:07:22 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_89pts_n18_summary_plots.png
+2026-03-08 23:07:22 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:22 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_89pts_n18_89pts_standard_residuals.png
+2026-03-08 23:07:22 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_89pts_n18_89pts_qq_plot.png
+2026-03-08 23:07:23 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_89pts_n18_89pts_studentized_residuals.png
+2026-03-08 23:07:23 - INFO - Processing and saving report for n=19...
+2026-03-08 23:07:23 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_89pts_n19_statistics.csv
+2026-03-08 23:07:23 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_89pts_n19_parameters.csv
+2026-03-08 23:07:23 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_89pts_n19_best_fit.csv
+2026-03-08 23:07:24 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_89pts_n19_summary_plots.png
+2026-03-08 23:07:24 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:24 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_89pts_n19_89pts_standard_residuals.png
+2026-03-08 23:07:24 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_89pts_n19_89pts_qq_plot.png
+2026-03-08 23:07:25 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_89pts_n19_89pts_studentized_residuals.png
+2026-03-08 23:07:25 - INFO - Processing and saving report for n=20...
+2026-03-08 23:07:25 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_89pts_n20_statistics.csv
+2026-03-08 23:07:25 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_89pts_n20_parameters.csv
+2026-03-08 23:07:25 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_89pts_n20_best_fit.csv
+2026-03-08 23:07:25 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_89pts_n20_summary_plots.png
+2026-03-08 23:07:25 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:26 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_89pts_n20_89pts_standard_residuals.png
+2026-03-08 23:07:26 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_89pts_n20_89pts_qq_plot.png
+2026-03-08 23:07:26 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_89pts_n20_89pts_studentized_residuals.png
+2026-03-08 23:07:26 - INFO - Processing and saving report for n=21...
+2026-03-08 23:07:26 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_89pts_n21_statistics.csv
+2026-03-08 23:07:26 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_89pts_n21_parameters.csv
+2026-03-08 23:07:26 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_89pts_n21_best_fit.csv
+2026-03-08 23:07:27 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_89pts_n21_summary_plots.png
+2026-03-08 23:07:27 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:27 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_89pts_n21_89pts_standard_residuals.png
+2026-03-08 23:07:27 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_89pts_n21_89pts_qq_plot.png
+2026-03-08 23:07:28 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_89pts_n21_89pts_studentized_residuals.png
+2026-03-08 23:07:28 - INFO - Processing and saving report for n=22...
+2026-03-08 23:07:28 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_89pts_n22_statistics.csv
+2026-03-08 23:07:28 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_89pts_n22_parameters.csv
+2026-03-08 23:07:28 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_89pts_n22_best_fit.csv
+2026-03-08 23:07:28 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_89pts_n22_summary_plots.png
+2026-03-08 23:07:28 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:29 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_89pts_n22_89pts_standard_residuals.png
+2026-03-08 23:07:29 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_89pts_n22_89pts_qq_plot.png
+2026-03-08 23:07:29 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_89pts_n22_89pts_studentized_residuals.png
+2026-03-08 23:07:29 - INFO - Processing and saving report for n=23...
+2026-03-08 23:07:29 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_89pts_n23_statistics.csv
+2026-03-08 23:07:29 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_89pts_n23_parameters.csv
+2026-03-08 23:07:29 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_89pts_n23_best_fit.csv
+2026-03-08 23:07:30 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_89pts_n23_summary_plots.png
+2026-03-08 23:07:30 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:30 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_89pts_n23_89pts_standard_residuals.png
+2026-03-08 23:07:30 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_89pts_n23_89pts_qq_plot.png
+2026-03-08 23:07:31 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_89pts_n23_89pts_studentized_residuals.png
+2026-03-08 23:07:31 - INFO - Processing and saving report for n=24...
+2026-03-08 23:07:31 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_89pts_n24_statistics.csv
+2026-03-08 23:07:31 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_89pts_n24_parameters.csv
+2026-03-08 23:07:31 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_89pts_n24_best_fit.csv
+2026-03-08 23:07:31 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_89pts_n24_summary_plots.png
+2026-03-08 23:07:31 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:32 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_89pts_n24_89pts_standard_residuals.png
+2026-03-08 23:07:32 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_89pts_n24_89pts_qq_plot.png
+2026-03-08 23:07:32 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_89pts_n24_89pts_studentized_residuals.png
+2026-03-08 23:07:32 - INFO - Processing and saving report for n=25...
+2026-03-08 23:07:32 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_89pts_n25_statistics.csv
+2026-03-08 23:07:32 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_89pts_n25_parameters.csv
+2026-03-08 23:07:32 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_89pts_n25_best_fit.csv
+2026-03-08 23:07:33 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_89pts_n25_summary_plots.png
+2026-03-08 23:07:33 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:33 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_89pts_n25_89pts_standard_residuals.png
+2026-03-08 23:07:33 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_89pts_n25_89pts_qq_plot.png
+2026-03-08 23:07:34 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_89pts_n25_89pts_studentized_residuals.png
+2026-03-08 23:07:34 - INFO - Processing and saving report for n=26...
+2026-03-08 23:07:34 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_89pts_n26_statistics.csv
+2026-03-08 23:07:34 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_89pts_n26_parameters.csv
+2026-03-08 23:07:34 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_89pts_n26_best_fit.csv
+2026-03-08 23:07:34 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_89pts_n26_summary_plots.png
+2026-03-08 23:07:34 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:35 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_89pts_n26_89pts_standard_residuals.png
+2026-03-08 23:07:35 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_89pts_n26_89pts_qq_plot.png
+2026-03-08 23:07:35 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_89pts_n26_89pts_studentized_residuals.png
+2026-03-08 23:07:35 - INFO - Processing and saving report for n=27...
+2026-03-08 23:07:35 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_89pts_n27_statistics.csv
+2026-03-08 23:07:35 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_89pts_n27_parameters.csv
+2026-03-08 23:07:35 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_89pts_n27_best_fit.csv
+2026-03-08 23:07:36 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_89pts_n27_summary_plots.png
+2026-03-08 23:07:36 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:37 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_89pts_n27_89pts_standard_residuals.png
+2026-03-08 23:07:37 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_89pts_n27_89pts_qq_plot.png
+2026-03-08 23:07:37 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_89pts_n27_89pts_studentized_residuals.png
+2026-03-08 23:07:37 - INFO - Processing and saving report for n=28...
+2026-03-08 23:07:37 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_89pts_n28_statistics.csv
+2026-03-08 23:07:37 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_89pts_n28_parameters.csv
+2026-03-08 23:07:37 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_89pts_n28_best_fit.csv
+2026-03-08 23:07:38 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_89pts_n28_summary_plots.png
+2026-03-08 23:07:38 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:38 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_89pts_n28_89pts_standard_residuals.png
+2026-03-08 23:07:38 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_89pts_n28_89pts_qq_plot.png
+2026-03-08 23:07:38 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_89pts_n28_89pts_studentized_residuals.png
+2026-03-08 23:07:38 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_full_scan_statistics.csv
+2026-03-08 23:07:38 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_m_per_n_aic_criterion.csv
+2026-03-08 23:07:39 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_summary_plots_aic_criterion.png
+2026-03-08 23:07:40 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_aic_best_fit.csv
+2026-03-08 23:07:40 - INFO - Report created with R_ref=None
+2026-03-08 23:07:40 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:40 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_aic_89pts_standard_residuals.png
+2026-03-08 23:07:40 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_aic_89pts_qq_plot.png
+2026-03-08 23:07:40 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_aic_89pts_studentized_residuals.png
+2026-03-08 23:07:41 - INFO - Summary of best 'm' per 'n' (criterion: sum_of_absolute_residuals) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_m_per_n_abs_criterion.csv
+2026-03-08 23:07:42 - INFO - Final summary plot (Sum of Absolute Residuals) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_summary_plots_abs_criterion.png
+2026-03-08 23:07:42 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_abs_best_fit.csv
+2026-03-08 23:07:42 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:07:42 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_abs_89pts_standard_residuals.png
+2026-03-08 23:07:42 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_abs_89pts_qq_plot.png
+2026-03-08 23:07:43 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_89pts_best_abs_89pts_studentized_residuals.png
+2026-03-08 23:07:55 - INFO - Segment 1: Explicitly recalculating local X for Rational Normalization 1.
+2026-03-08 23:08:03 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_2\Seg_1_n2_statistics.csv
+2026-03-08 23:08:03 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_2\Seg_1_n2_parameters.csv
+2026-03-08 23:08:03 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_2\Seg_1_n2_best_fit.csv
+2026-03-08 23:08:04 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_2\Seg_1_n2_summary_plots.png
+2026-03-08 23:08:04 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:04 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_2\Seg_1_n2_27pts_standard_residuals.png
+2026-03-08 23:08:05 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_2\Seg_1_n2_27pts_qq_plot.png
+2026-03-08 23:08:05 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_2\Seg_1_n2_27pts_studentized_residuals.png
+2026-03-08 23:08:05 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_3\Seg_1_n3_statistics.csv
+2026-03-08 23:08:05 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_3\Seg_1_n3_parameters.csv
+2026-03-08 23:08:05 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_3\Seg_1_n3_best_fit.csv
+2026-03-08 23:08:06 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_3\Seg_1_n3_summary_plots.png
+2026-03-08 23:08:06 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:06 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_3\Seg_1_n3_27pts_standard_residuals.png
+2026-03-08 23:08:06 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_3\Seg_1_n3_27pts_qq_plot.png
+2026-03-08 23:08:06 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_3\Seg_1_n3_27pts_studentized_residuals.png
+2026-03-08 23:08:06 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_4\Seg_1_n4_statistics.csv
+2026-03-08 23:08:06 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_4\Seg_1_n4_parameters.csv
+2026-03-08 23:08:06 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_4\Seg_1_n4_best_fit.csv
+2026-03-08 23:08:07 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_4\Seg_1_n4_summary_plots.png
+2026-03-08 23:08:07 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:07 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_4\Seg_1_n4_27pts_standard_residuals.png
+2026-03-08 23:08:08 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_4\Seg_1_n4_27pts_qq_plot.png
+2026-03-08 23:08:08 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_4\Seg_1_n4_27pts_studentized_residuals.png
+2026-03-08 23:08:08 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_5\Seg_1_n5_statistics.csv
+2026-03-08 23:08:08 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_5\Seg_1_n5_parameters.csv
+2026-03-08 23:08:08 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_5\Seg_1_n5_best_fit.csv
+2026-03-08 23:08:09 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_5\Seg_1_n5_summary_plots.png
+2026-03-08 23:08:09 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:09 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_5\Seg_1_n5_27pts_standard_residuals.png
+2026-03-08 23:08:09 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_5\Seg_1_n5_27pts_qq_plot.png
+2026-03-08 23:08:09 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_5\Seg_1_n5_27pts_studentized_residuals.png
+2026-03-08 23:08:09 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_6\Seg_1_n6_statistics.csv
+2026-03-08 23:08:09 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_6\Seg_1_n6_parameters.csv
+2026-03-08 23:08:09 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_6\Seg_1_n6_best_fit.csv
+2026-03-08 23:08:11 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_6\Seg_1_n6_summary_plots.png
+2026-03-08 23:08:11 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:11 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_6\Seg_1_n6_27pts_standard_residuals.png
+2026-03-08 23:08:12 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_6\Seg_1_n6_27pts_qq_plot.png
+2026-03-08 23:08:12 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_6\Seg_1_n6_27pts_studentized_residuals.png
+2026-03-08 23:08:12 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_7\Seg_1_n7_statistics.csv
+2026-03-08 23:08:12 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_7\Seg_1_n7_parameters.csv
+2026-03-08 23:08:12 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_7\Seg_1_n7_best_fit.csv
+2026-03-08 23:08:13 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_7\Seg_1_n7_summary_plots.png
+2026-03-08 23:08:13 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:13 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_7\Seg_1_n7_27pts_standard_residuals.png
+2026-03-08 23:08:13 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_7\Seg_1_n7_27pts_qq_plot.png
+2026-03-08 23:08:13 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_7\Seg_1_n7_27pts_studentized_residuals.png
+2026-03-08 23:08:13 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_8\Seg_1_n8_statistics.csv
+2026-03-08 23:08:13 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_8\Seg_1_n8_parameters.csv
+2026-03-08 23:08:13 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_8\Seg_1_n8_best_fit.csv
+2026-03-08 23:08:14 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_8\Seg_1_n8_summary_plots.png
+2026-03-08 23:08:14 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:14 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_8\Seg_1_n8_27pts_standard_residuals.png
+2026-03-08 23:08:14 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_8\Seg_1_n8_27pts_qq_plot.png
+2026-03-08 23:08:15 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\n_8\Seg_1_n8_27pts_studentized_residuals.png
+2026-03-08 23:08:15 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\Seg_1_full_scan_statistics.csv
+2026-03-08 23:08:15 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\Seg_1_best_m_per_n_aic_criterion.csv
+2026-03-08 23:08:15 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\Seg_1_summary_plots_aic_criterion.png
+2026-03-08 23:08:16 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\Seg_1_best_aic_best_fit.csv
+2026-03-08 23:08:16 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:16 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\Seg_1_best_aic_27pts_standard_residuals.png
+2026-03-08 23:08:16 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\Seg_1_best_aic_27pts_qq_plot.png
+2026-03-08 23:08:16 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_1\Seg_1_best_aic_27pts_studentized_residuals.png
+2026-03-08 23:08:16 - INFO - Segment 2: Explicitly recalculating local X for Rational Normalization 1.
+2026-03-08 23:08:21 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_2\Seg_2_n2_statistics.csv
+2026-03-08 23:08:21 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_2\Seg_2_n2_parameters.csv
+2026-03-08 23:08:21 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_2\Seg_2_n2_best_fit.csv
+2026-03-08 23:08:22 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_2\Seg_2_n2_summary_plots.png
+2026-03-08 23:08:22 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:22 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_2\Seg_2_n2_20pts_standard_residuals.png
+2026-03-08 23:08:22 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_2\Seg_2_n2_20pts_qq_plot.png
+2026-03-08 23:08:23 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_2\Seg_2_n2_20pts_studentized_residuals.png
+2026-03-08 23:08:23 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_3\Seg_2_n3_statistics.csv
+2026-03-08 23:08:23 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_3\Seg_2_n3_parameters.csv
+2026-03-08 23:08:23 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_3\Seg_2_n3_best_fit.csv
+2026-03-08 23:08:24 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_3\Seg_2_n3_summary_plots.png
+2026-03-08 23:08:24 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:24 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_3\Seg_2_n3_20pts_standard_residuals.png
+2026-03-08 23:08:24 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_3\Seg_2_n3_20pts_qq_plot.png
+2026-03-08 23:08:24 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_3\Seg_2_n3_20pts_studentized_residuals.png
+2026-03-08 23:08:24 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_4\Seg_2_n4_statistics.csv
+2026-03-08 23:08:24 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_4\Seg_2_n4_parameters.csv
+2026-03-08 23:08:24 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_4\Seg_2_n4_best_fit.csv
+2026-03-08 23:08:25 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_4\Seg_2_n4_summary_plots.png
+2026-03-08 23:08:25 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:25 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_4\Seg_2_n4_20pts_standard_residuals.png
+2026-03-08 23:08:25 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_4\Seg_2_n4_20pts_qq_plot.png
+2026-03-08 23:08:26 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_4\Seg_2_n4_20pts_studentized_residuals.png
+2026-03-08 23:08:26 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_5\Seg_2_n5_statistics.csv
+2026-03-08 23:08:26 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_5\Seg_2_n5_parameters.csv
+2026-03-08 23:08:26 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_5\Seg_2_n5_best_fit.csv
+2026-03-08 23:08:27 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_5\Seg_2_n5_summary_plots.png
+2026-03-08 23:08:27 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:27 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_5\Seg_2_n5_20pts_standard_residuals.png
+2026-03-08 23:08:27 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_5\Seg_2_n5_20pts_qq_plot.png
+2026-03-08 23:08:27 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_5\Seg_2_n5_20pts_studentized_residuals.png
+2026-03-08 23:08:27 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_6\Seg_2_n6_statistics.csv
+2026-03-08 23:08:27 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_6\Seg_2_n6_parameters.csv
+2026-03-08 23:08:27 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_6\Seg_2_n6_best_fit.csv
+2026-03-08 23:08:28 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_6\Seg_2_n6_summary_plots.png
+2026-03-08 23:08:28 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:28 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_6\Seg_2_n6_20pts_standard_residuals.png
+2026-03-08 23:08:28 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_6\Seg_2_n6_20pts_qq_plot.png
+2026-03-08 23:08:29 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\n_6\Seg_2_n6_20pts_studentized_residuals.png
+2026-03-08 23:08:29 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\Seg_2_full_scan_statistics.csv
+2026-03-08 23:08:29 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\Seg_2_best_m_per_n_aic_criterion.csv
+2026-03-08 23:08:30 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\Seg_2_summary_plots_aic_criterion.png
+2026-03-08 23:08:30 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\Seg_2_best_aic_best_fit.csv
+2026-03-08 23:08:30 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:30 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\Seg_2_best_aic_20pts_standard_residuals.png
+2026-03-08 23:08:31 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\Seg_2_best_aic_20pts_qq_plot.png
+2026-03-08 23:08:31 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_2\Seg_2_best_aic_20pts_studentized_residuals.png
+2026-03-08 23:08:31 - INFO - Rational Function detected. Bypassing knot optimization for segment 2.
+2026-03-08 23:08:31 - INFO - Segment 3: Explicitly recalculating local X for Rational Normalization 1.
+2026-03-08 23:08:38 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_2\Seg_3_n2_statistics.csv
+2026-03-08 23:08:38 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_2\Seg_3_n2_parameters.csv
+2026-03-08 23:08:38 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_2\Seg_3_n2_best_fit.csv
+2026-03-08 23:08:39 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_2\Seg_3_n2_summary_plots.png
+2026-03-08 23:08:39 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:39 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_2\Seg_3_n2_44pts_standard_residuals.png
+2026-03-08 23:08:39 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_2\Seg_3_n2_44pts_qq_plot.png
+2026-03-08 23:08:40 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_2\Seg_3_n2_44pts_studentized_residuals.png
+2026-03-08 23:08:40 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_3\Seg_3_n3_statistics.csv
+2026-03-08 23:08:40 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_3\Seg_3_n3_parameters.csv
+2026-03-08 23:08:40 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_3\Seg_3_n3_best_fit.csv
+2026-03-08 23:08:41 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_3\Seg_3_n3_summary_plots.png
+2026-03-08 23:08:41 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:41 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_3\Seg_3_n3_44pts_standard_residuals.png
+2026-03-08 23:08:41 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_3\Seg_3_n3_44pts_qq_plot.png
+2026-03-08 23:08:41 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_3\Seg_3_n3_44pts_studentized_residuals.png
+2026-03-08 23:08:41 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_4\Seg_3_n4_statistics.csv
+2026-03-08 23:08:41 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_4\Seg_3_n4_parameters.csv
+2026-03-08 23:08:41 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_4\Seg_3_n4_best_fit.csv
+2026-03-08 23:08:42 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_4\Seg_3_n4_summary_plots.png
+2026-03-08 23:08:42 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:42 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_4\Seg_3_n4_44pts_standard_residuals.png
+2026-03-08 23:08:42 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_4\Seg_3_n4_44pts_qq_plot.png
+2026-03-08 23:08:43 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_4\Seg_3_n4_44pts_studentized_residuals.png
+2026-03-08 23:08:43 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_5\Seg_3_n5_statistics.csv
+2026-03-08 23:08:43 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_5\Seg_3_n5_parameters.csv
+2026-03-08 23:08:43 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_5\Seg_3_n5_best_fit.csv
+2026-03-08 23:08:43 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_5\Seg_3_n5_summary_plots.png
+2026-03-08 23:08:43 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:44 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_5\Seg_3_n5_44pts_standard_residuals.png
+2026-03-08 23:08:44 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_5\Seg_3_n5_44pts_qq_plot.png
+2026-03-08 23:08:44 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_5\Seg_3_n5_44pts_studentized_residuals.png
+2026-03-08 23:08:44 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_6\Seg_3_n6_statistics.csv
+2026-03-08 23:08:44 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_6\Seg_3_n6_parameters.csv
+2026-03-08 23:08:44 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_6\Seg_3_n6_best_fit.csv
+2026-03-08 23:08:45 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_6\Seg_3_n6_summary_plots.png
+2026-03-08 23:08:45 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:45 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_6\Seg_3_n6_44pts_standard_residuals.png
+2026-03-08 23:08:46 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_6\Seg_3_n6_44pts_qq_plot.png
+2026-03-08 23:08:46 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_6\Seg_3_n6_44pts_studentized_residuals.png
+2026-03-08 23:08:46 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_7\Seg_3_n7_statistics.csv
+2026-03-08 23:08:46 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_7\Seg_3_n7_parameters.csv
+2026-03-08 23:08:46 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_7\Seg_3_n7_best_fit.csv
+2026-03-08 23:08:47 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_7\Seg_3_n7_summary_plots.png
+2026-03-08 23:08:47 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:47 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_7\Seg_3_n7_44pts_standard_residuals.png
+2026-03-08 23:08:47 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_7\Seg_3_n7_44pts_qq_plot.png
+2026-03-08 23:08:47 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_7\Seg_3_n7_44pts_studentized_residuals.png
+2026-03-08 23:08:47 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_8\Seg_3_n8_statistics.csv
+2026-03-08 23:08:47 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_8\Seg_3_n8_parameters.csv
+2026-03-08 23:08:47 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_8\Seg_3_n8_best_fit.csv
+2026-03-08 23:08:48 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_8\Seg_3_n8_summary_plots.png
+2026-03-08 23:08:48 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:48 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_8\Seg_3_n8_44pts_standard_residuals.png
+2026-03-08 23:08:48 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_8\Seg_3_n8_44pts_qq_plot.png
+2026-03-08 23:08:49 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_8\Seg_3_n8_44pts_studentized_residuals.png
+2026-03-08 23:08:49 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_9\Seg_3_n9_statistics.csv
+2026-03-08 23:08:49 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_9\Seg_3_n9_parameters.csv
+2026-03-08 23:08:49 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_9\Seg_3_n9_best_fit.csv
+2026-03-08 23:08:50 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_9\Seg_3_n9_summary_plots.png
+2026-03-08 23:08:50 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:50 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_9\Seg_3_n9_44pts_standard_residuals.png
+2026-03-08 23:08:50 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_9\Seg_3_n9_44pts_qq_plot.png
+2026-03-08 23:08:50 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_9\Seg_3_n9_44pts_studentized_residuals.png
+2026-03-08 23:08:50 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_10\Seg_3_n10_statistics.csv
+2026-03-08 23:08:50 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_10\Seg_3_n10_parameters.csv
+2026-03-08 23:08:50 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_10\Seg_3_n10_best_fit.csv
+2026-03-08 23:08:51 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_10\Seg_3_n10_summary_plots.png
+2026-03-08 23:08:51 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:51 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_10\Seg_3_n10_44pts_standard_residuals.png
+2026-03-08 23:08:51 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_10\Seg_3_n10_44pts_qq_plot.png
+2026-03-08 23:08:52 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_10\Seg_3_n10_44pts_studentized_residuals.png
+2026-03-08 23:08:52 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_11\Seg_3_n11_statistics.csv
+2026-03-08 23:08:52 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_11\Seg_3_n11_parameters.csv
+2026-03-08 23:08:52 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_11\Seg_3_n11_best_fit.csv
+2026-03-08 23:08:53 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_11\Seg_3_n11_summary_plots.png
+2026-03-08 23:08:53 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:53 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_11\Seg_3_n11_44pts_standard_residuals.png
+2026-03-08 23:08:53 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_11\Seg_3_n11_44pts_qq_plot.png
+2026-03-08 23:08:53 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_11\Seg_3_n11_44pts_studentized_residuals.png
+2026-03-08 23:08:53 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_12\Seg_3_n12_statistics.csv
+2026-03-08 23:08:53 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_12\Seg_3_n12_parameters.csv
+2026-03-08 23:08:53 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_12\Seg_3_n12_best_fit.csv
+2026-03-08 23:08:54 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_12\Seg_3_n12_summary_plots.png
+2026-03-08 23:08:54 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:54 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_12\Seg_3_n12_44pts_standard_residuals.png
+2026-03-08 23:08:54 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_12\Seg_3_n12_44pts_qq_plot.png
+2026-03-08 23:08:55 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_12\Seg_3_n12_44pts_studentized_residuals.png
+2026-03-08 23:08:55 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_13\Seg_3_n13_statistics.csv
+2026-03-08 23:08:55 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_13\Seg_3_n13_parameters.csv
+2026-03-08 23:08:55 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_13\Seg_3_n13_best_fit.csv
+2026-03-08 23:08:56 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_13\Seg_3_n13_summary_plots.png
+2026-03-08 23:08:56 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:56 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_13\Seg_3_n13_44pts_standard_residuals.png
+2026-03-08 23:08:56 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_13\Seg_3_n13_44pts_qq_plot.png
+2026-03-08 23:08:56 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_13\Seg_3_n13_44pts_studentized_residuals.png
+2026-03-08 23:08:56 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_14\Seg_3_n14_statistics.csv
+2026-03-08 23:08:56 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_14\Seg_3_n14_parameters.csv
+2026-03-08 23:08:56 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_14\Seg_3_n14_best_fit.csv
+2026-03-08 23:08:57 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_14\Seg_3_n14_summary_plots.png
+2026-03-08 23:08:57 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:57 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_14\Seg_3_n14_44pts_standard_residuals.png
+2026-03-08 23:08:57 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_14\Seg_3_n14_44pts_qq_plot.png
+2026-03-08 23:08:58 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\n_14\Seg_3_n14_44pts_studentized_residuals.png
+2026-03-08 23:08:58 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\Seg_3_full_scan_statistics.csv
+2026-03-08 23:08:58 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\Seg_3_best_m_per_n_aic_criterion.csv
+2026-03-08 23:08:59 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\Seg_3_summary_plots_aic_criterion.png
+2026-03-08 23:08:59 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\Seg_3_best_aic_best_fit.csv
+2026-03-08 23:08:59 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:08:59 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\Seg_3_best_aic_44pts_standard_residuals.png
+2026-03-08 23:08:59 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\Seg_3_best_aic_44pts_qq_plot.png
+2026-03-08 23:09:00 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Segment_3\Seg_3_best_aic_44pts_studentized_residuals.png
+2026-03-08 23:09:00 - INFO - Rational Function detected. Bypassing knot optimization for segment 3.
+2026-03-08 23:09:00 - INFO - Stitched dataset exported to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Piecewise_Model_stitched_full_data.csv
+2026-03-08 23:09:01 - INFO - Piecewise diagnostics plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Piecewise_Model_piecewise_diagnostics.png
+2026-03-08 23:09:03 - INFO - Global 3-panel piecewise summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\Piecewise Model_global_3panel_summary.png
+2026-03-08 23:09:03 - INFO - Piecewise report saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_89pts\piecewise_final_report.csv
+2026-03-08 23:09:46 - INFO - Segment 1: Explicitly recalculating local X for Rational Normalization 1.
+2026-03-08 23:09:50 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_2\Seg_1_n2_statistics.csv
+2026-03-08 23:09:50 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_2\Seg_1_n2_parameters.csv
+2026-03-08 23:09:50 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_2\Seg_1_n2_best_fit.csv
+2026-03-08 23:09:51 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_2\Seg_1_n2_summary_plots.png
+2026-03-08 23:09:51 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:09:52 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_2\Seg_1_n2_26pts_standard_residuals.png
+2026-03-08 23:09:52 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_2\Seg_1_n2_26pts_qq_plot.png
+2026-03-08 23:09:52 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_2\Seg_1_n2_26pts_studentized_residuals.png
+2026-03-08 23:09:52 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_3\Seg_1_n3_statistics.csv
+2026-03-08 23:09:52 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_3\Seg_1_n3_parameters.csv
+2026-03-08 23:09:52 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_3\Seg_1_n3_best_fit.csv
+2026-03-08 23:09:53 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_3\Seg_1_n3_summary_plots.png
+2026-03-08 23:09:53 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:09:53 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_3\Seg_1_n3_26pts_standard_residuals.png
+2026-03-08 23:09:53 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_3\Seg_1_n3_26pts_qq_plot.png
+2026-03-08 23:09:53 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_3\Seg_1_n3_26pts_studentized_residuals.png
+2026-03-08 23:09:53 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_4\Seg_1_n4_statistics.csv
+2026-03-08 23:09:53 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_4\Seg_1_n4_parameters.csv
+2026-03-08 23:09:53 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_4\Seg_1_n4_best_fit.csv
+2026-03-08 23:09:55 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_4\Seg_1_n4_summary_plots.png
+2026-03-08 23:09:55 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:09:55 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_4\Seg_1_n4_26pts_standard_residuals.png
+2026-03-08 23:09:55 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_4\Seg_1_n4_26pts_qq_plot.png
+2026-03-08 23:09:55 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_4\Seg_1_n4_26pts_studentized_residuals.png
+2026-03-08 23:09:55 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_5\Seg_1_n5_statistics.csv
+2026-03-08 23:09:55 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_5\Seg_1_n5_parameters.csv
+2026-03-08 23:09:55 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_5\Seg_1_n5_best_fit.csv
+2026-03-08 23:09:56 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_5\Seg_1_n5_summary_plots.png
+2026-03-08 23:09:56 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:09:57 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_5\Seg_1_n5_26pts_standard_residuals.png
+2026-03-08 23:09:57 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_5\Seg_1_n5_26pts_qq_plot.png
+2026-03-08 23:09:57 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_5\Seg_1_n5_26pts_studentized_residuals.png
+2026-03-08 23:09:57 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_6\Seg_1_n6_statistics.csv
+2026-03-08 23:09:57 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_6\Seg_1_n6_parameters.csv
+2026-03-08 23:09:57 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_6\Seg_1_n6_best_fit.csv
+2026-03-08 23:09:58 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_6\Seg_1_n6_summary_plots.png
+2026-03-08 23:09:58 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:09:58 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_6\Seg_1_n6_26pts_standard_residuals.png
+2026-03-08 23:09:58 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_6\Seg_1_n6_26pts_qq_plot.png
+2026-03-08 23:09:58 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_6\Seg_1_n6_26pts_studentized_residuals.png
+2026-03-08 23:09:58 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_7\Seg_1_n7_statistics.csv
+2026-03-08 23:09:58 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_7\Seg_1_n7_parameters.csv
+2026-03-08 23:09:58 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_7\Seg_1_n7_best_fit.csv
+2026-03-08 23:09:59 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_7\Seg_1_n7_summary_plots.png
+2026-03-08 23:09:59 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:09:59 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_7\Seg_1_n7_26pts_standard_residuals.png
+2026-03-08 23:10:00 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_7\Seg_1_n7_26pts_qq_plot.png
+2026-03-08 23:10:00 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_7\Seg_1_n7_26pts_studentized_residuals.png
+2026-03-08 23:10:00 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_8\Seg_1_n8_statistics.csv
+2026-03-08 23:10:00 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_8\Seg_1_n8_parameters.csv
+2026-03-08 23:10:00 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_8\Seg_1_n8_best_fit.csv
+2026-03-08 23:10:01 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_8\Seg_1_n8_summary_plots.png
+2026-03-08 23:10:01 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:01 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_8\Seg_1_n8_26pts_standard_residuals.png
+2026-03-08 23:10:01 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_8\Seg_1_n8_26pts_qq_plot.png
+2026-03-08 23:10:01 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\n_8\Seg_1_n8_26pts_studentized_residuals.png
+2026-03-08 23:10:01 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\Seg_1_full_scan_statistics.csv
+2026-03-08 23:10:01 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\Seg_1_best_m_per_n_aic_criterion.csv
+2026-03-08 23:10:02 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\Seg_1_summary_plots_aic_criterion.png
+2026-03-08 23:10:03 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\Seg_1_best_aic_best_fit.csv
+2026-03-08 23:10:03 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:03 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\Seg_1_best_aic_26pts_standard_residuals.png
+2026-03-08 23:10:03 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\Seg_1_best_aic_26pts_qq_plot.png
+2026-03-08 23:10:03 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_1\Seg_1_best_aic_26pts_studentized_residuals.png
+2026-03-08 23:10:03 - INFO - Segment 2: Explicitly recalculating local X for Rational Normalization 1.
+2026-03-08 23:10:07 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_2\Seg_2_n2_statistics.csv
+2026-03-08 23:10:07 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_2\Seg_2_n2_parameters.csv
+2026-03-08 23:10:07 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_2\Seg_2_n2_best_fit.csv
+2026-03-08 23:10:08 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_2\Seg_2_n2_summary_plots.png
+2026-03-08 23:10:08 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:08 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_2\Seg_2_n2_20pts_standard_residuals.png
+2026-03-08 23:10:08 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_2\Seg_2_n2_20pts_qq_plot.png
+2026-03-08 23:10:08 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_2\Seg_2_n2_20pts_studentized_residuals.png
+2026-03-08 23:10:08 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_3\Seg_2_n3_statistics.csv
+2026-03-08 23:10:08 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_3\Seg_2_n3_parameters.csv
+2026-03-08 23:10:08 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_3\Seg_2_n3_best_fit.csv
+2026-03-08 23:10:09 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_3\Seg_2_n3_summary_plots.png
+2026-03-08 23:10:09 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:09 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_3\Seg_2_n3_20pts_standard_residuals.png
+2026-03-08 23:10:10 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_3\Seg_2_n3_20pts_qq_plot.png
+2026-03-08 23:10:10 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_3\Seg_2_n3_20pts_studentized_residuals.png
+2026-03-08 23:10:10 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_4\Seg_2_n4_statistics.csv
+2026-03-08 23:10:10 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_4\Seg_2_n4_parameters.csv
+2026-03-08 23:10:10 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_4\Seg_2_n4_best_fit.csv
+2026-03-08 23:10:11 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_4\Seg_2_n4_summary_plots.png
+2026-03-08 23:10:11 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:11 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_4\Seg_2_n4_20pts_standard_residuals.png
+2026-03-08 23:10:11 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_4\Seg_2_n4_20pts_qq_plot.png
+2026-03-08 23:10:11 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_4\Seg_2_n4_20pts_studentized_residuals.png
+2026-03-08 23:10:11 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_5\Seg_2_n5_statistics.csv
+2026-03-08 23:10:11 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_5\Seg_2_n5_parameters.csv
+2026-03-08 23:10:11 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_5\Seg_2_n5_best_fit.csv
+2026-03-08 23:10:12 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_5\Seg_2_n5_summary_plots.png
+2026-03-08 23:10:12 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:13 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_5\Seg_2_n5_20pts_standard_residuals.png
+2026-03-08 23:10:13 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_5\Seg_2_n5_20pts_qq_plot.png
+2026-03-08 23:10:13 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_5\Seg_2_n5_20pts_studentized_residuals.png
+2026-03-08 23:10:13 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_6\Seg_2_n6_statistics.csv
+2026-03-08 23:10:13 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_6\Seg_2_n6_parameters.csv
+2026-03-08 23:10:13 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_6\Seg_2_n6_best_fit.csv
+2026-03-08 23:10:14 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_6\Seg_2_n6_summary_plots.png
+2026-03-08 23:10:14 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:14 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_6\Seg_2_n6_20pts_standard_residuals.png
+2026-03-08 23:10:14 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_6\Seg_2_n6_20pts_qq_plot.png
+2026-03-08 23:10:14 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\n_6\Seg_2_n6_20pts_studentized_residuals.png
+2026-03-08 23:10:14 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\Seg_2_full_scan_statistics.csv
+2026-03-08 23:10:14 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\Seg_2_best_m_per_n_aic_criterion.csv
+2026-03-08 23:10:15 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\Seg_2_summary_plots_aic_criterion.png
+2026-03-08 23:10:16 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\Seg_2_best_aic_best_fit.csv
+2026-03-08 23:10:16 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:16 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\Seg_2_best_aic_20pts_standard_residuals.png
+2026-03-08 23:10:16 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\Seg_2_best_aic_20pts_qq_plot.png
+2026-03-08 23:10:16 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_2\Seg_2_best_aic_20pts_studentized_residuals.png
+2026-03-08 23:10:16 - INFO - Rational Function detected. Bypassing knot optimization for segment 2.
+2026-03-08 23:10:16 - INFO - Segment 3: Explicitly recalculating local X for Rational Normalization 1.
+2026-03-08 23:10:24 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_2\Seg_3_n2_statistics.csv
+2026-03-08 23:10:24 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_2\Seg_3_n2_parameters.csv
+2026-03-08 23:10:24 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_2\Seg_3_n2_best_fit.csv
+2026-03-08 23:10:25 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_2\Seg_3_n2_summary_plots.png
+2026-03-08 23:10:25 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:25 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_2\Seg_3_n2_43pts_standard_residuals.png
+2026-03-08 23:10:25 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_2\Seg_3_n2_43pts_qq_plot.png
+2026-03-08 23:10:25 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_2\Seg_3_n2_43pts_studentized_residuals.png
+2026-03-08 23:10:25 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_3\Seg_3_n3_statistics.csv
+2026-03-08 23:10:25 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_3\Seg_3_n3_parameters.csv
+2026-03-08 23:10:25 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_3\Seg_3_n3_best_fit.csv
+2026-03-08 23:10:26 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_3\Seg_3_n3_summary_plots.png
+2026-03-08 23:10:26 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:26 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_3\Seg_3_n3_43pts_standard_residuals.png
+2026-03-08 23:10:26 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_3\Seg_3_n3_43pts_qq_plot.png
+2026-03-08 23:10:27 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_3\Seg_3_n3_43pts_studentized_residuals.png
+2026-03-08 23:10:27 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_4\Seg_3_n4_statistics.csv
+2026-03-08 23:10:27 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_4\Seg_3_n4_parameters.csv
+2026-03-08 23:10:27 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_4\Seg_3_n4_best_fit.csv
+2026-03-08 23:10:28 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_4\Seg_3_n4_summary_plots.png
+2026-03-08 23:10:28 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:28 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_4\Seg_3_n4_43pts_standard_residuals.png
+2026-03-08 23:10:28 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_4\Seg_3_n4_43pts_qq_plot.png
+2026-03-08 23:10:28 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_4\Seg_3_n4_43pts_studentized_residuals.png
+2026-03-08 23:10:28 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_5\Seg_3_n5_statistics.csv
+2026-03-08 23:10:28 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_5\Seg_3_n5_parameters.csv
+2026-03-08 23:10:28 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_5\Seg_3_n5_best_fit.csv
+2026-03-08 23:10:29 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_5\Seg_3_n5_summary_plots.png
+2026-03-08 23:10:29 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:29 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_5\Seg_3_n5_43pts_standard_residuals.png
+2026-03-08 23:10:29 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_5\Seg_3_n5_43pts_qq_plot.png
+2026-03-08 23:10:30 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_5\Seg_3_n5_43pts_studentized_residuals.png
+2026-03-08 23:10:30 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_6\Seg_3_n6_statistics.csv
+2026-03-08 23:10:30 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_6\Seg_3_n6_parameters.csv
+2026-03-08 23:10:30 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_6\Seg_3_n6_best_fit.csv
+2026-03-08 23:10:31 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_6\Seg_3_n6_summary_plots.png
+2026-03-08 23:10:31 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:31 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_6\Seg_3_n6_43pts_standard_residuals.png
+2026-03-08 23:10:31 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_6\Seg_3_n6_43pts_qq_plot.png
+2026-03-08 23:10:31 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_6\Seg_3_n6_43pts_studentized_residuals.png
+2026-03-08 23:10:31 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_7\Seg_3_n7_statistics.csv
+2026-03-08 23:10:31 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_7\Seg_3_n7_parameters.csv
+2026-03-08 23:10:31 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_7\Seg_3_n7_best_fit.csv
+2026-03-08 23:10:32 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_7\Seg_3_n7_summary_plots.png
+2026-03-08 23:10:32 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:32 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_7\Seg_3_n7_43pts_standard_residuals.png
+2026-03-08 23:10:32 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_7\Seg_3_n7_43pts_qq_plot.png
+2026-03-08 23:10:33 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_7\Seg_3_n7_43pts_studentized_residuals.png
+2026-03-08 23:10:33 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_8\Seg_3_n8_statistics.csv
+2026-03-08 23:10:33 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_8\Seg_3_n8_parameters.csv
+2026-03-08 23:10:33 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_8\Seg_3_n8_best_fit.csv
+2026-03-08 23:10:34 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_8\Seg_3_n8_summary_plots.png
+2026-03-08 23:10:34 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:34 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_8\Seg_3_n8_43pts_standard_residuals.png
+2026-03-08 23:10:34 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_8\Seg_3_n8_43pts_qq_plot.png
+2026-03-08 23:10:34 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_8\Seg_3_n8_43pts_studentized_residuals.png
+2026-03-08 23:10:34 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_9\Seg_3_n9_statistics.csv
+2026-03-08 23:10:34 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_9\Seg_3_n9_parameters.csv
+2026-03-08 23:10:34 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_9\Seg_3_n9_best_fit.csv
+2026-03-08 23:10:35 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_9\Seg_3_n9_summary_plots.png
+2026-03-08 23:10:35 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:35 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_9\Seg_3_n9_43pts_standard_residuals.png
+2026-03-08 23:10:35 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_9\Seg_3_n9_43pts_qq_plot.png
+2026-03-08 23:10:36 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_9\Seg_3_n9_43pts_studentized_residuals.png
+2026-03-08 23:10:36 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_10\Seg_3_n10_statistics.csv
+2026-03-08 23:10:36 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_10\Seg_3_n10_parameters.csv
+2026-03-08 23:10:36 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_10\Seg_3_n10_best_fit.csv
+2026-03-08 23:10:37 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_10\Seg_3_n10_summary_plots.png
+2026-03-08 23:10:37 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:37 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_10\Seg_3_n10_43pts_standard_residuals.png
+2026-03-08 23:10:37 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_10\Seg_3_n10_43pts_qq_plot.png
+2026-03-08 23:10:37 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_10\Seg_3_n10_43pts_studentized_residuals.png
+2026-03-08 23:10:37 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_11\Seg_3_n11_statistics.csv
+2026-03-08 23:10:37 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_11\Seg_3_n11_parameters.csv
+2026-03-08 23:10:37 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_11\Seg_3_n11_best_fit.csv
+2026-03-08 23:10:38 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_11\Seg_3_n11_summary_plots.png
+2026-03-08 23:10:38 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:38 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_11\Seg_3_n11_43pts_standard_residuals.png
+2026-03-08 23:10:38 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_11\Seg_3_n11_43pts_qq_plot.png
+2026-03-08 23:10:39 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_11\Seg_3_n11_43pts_studentized_residuals.png
+2026-03-08 23:10:39 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_12\Seg_3_n12_statistics.csv
+2026-03-08 23:10:39 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_12\Seg_3_n12_parameters.csv
+2026-03-08 23:10:39 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_12\Seg_3_n12_best_fit.csv
+2026-03-08 23:10:40 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_12\Seg_3_n12_summary_plots.png
+2026-03-08 23:10:40 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:40 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_12\Seg_3_n12_43pts_standard_residuals.png
+2026-03-08 23:10:40 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_12\Seg_3_n12_43pts_qq_plot.png
+2026-03-08 23:10:40 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_12\Seg_3_n12_43pts_studentized_residuals.png
+2026-03-08 23:10:40 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_13\Seg_3_n13_statistics.csv
+2026-03-08 23:10:40 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_13\Seg_3_n13_parameters.csv
+2026-03-08 23:10:40 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_13\Seg_3_n13_best_fit.csv
+2026-03-08 23:10:41 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_13\Seg_3_n13_summary_plots.png
+2026-03-08 23:10:41 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:41 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_13\Seg_3_n13_43pts_standard_residuals.png
+2026-03-08 23:10:42 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_13\Seg_3_n13_43pts_qq_plot.png
+2026-03-08 23:10:42 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_13\Seg_3_n13_43pts_studentized_residuals.png
+2026-03-08 23:10:42 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_14\Seg_3_n14_statistics.csv
+2026-03-08 23:10:42 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_14\Seg_3_n14_parameters.csv
+2026-03-08 23:10:42 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_14\Seg_3_n14_best_fit.csv
+2026-03-08 23:10:43 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_14\Seg_3_n14_summary_plots.png
+2026-03-08 23:10:43 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:43 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_14\Seg_3_n14_43pts_standard_residuals.png
+2026-03-08 23:10:43 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_14\Seg_3_n14_43pts_qq_plot.png
+2026-03-08 23:10:43 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\n_14\Seg_3_n14_43pts_studentized_residuals.png
+2026-03-08 23:10:43 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\Seg_3_full_scan_statistics.csv
+2026-03-08 23:10:43 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\Seg_3_best_m_per_n_aic_criterion.csv
+2026-03-08 23:10:44 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\Seg_3_summary_plots_aic_criterion.png
+2026-03-08 23:10:45 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\Seg_3_best_aic_best_fit.csv
+2026-03-08 23:10:45 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:10:45 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\Seg_3_best_aic_43pts_standard_residuals.png
+2026-03-08 23:10:45 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\Seg_3_best_aic_43pts_qq_plot.png
+2026-03-08 23:10:45 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Segment_3\Seg_3_best_aic_43pts_studentized_residuals.png
+2026-03-08 23:10:45 - INFO - Rational Function detected. Bypassing knot optimization for segment 3.
+2026-03-08 23:10:45 - INFO - Stitched dataset exported to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Piecewise_Model_stitched_full_data.csv
+2026-03-08 23:10:47 - INFO - Piecewise diagnostics plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Piecewise_Model_piecewise_diagnostics.png
+2026-03-08 23:10:49 - INFO - Global 3-panel piecewise summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\Piecewise Model_global_3panel_summary.png
+2026-03-08 23:10:49 - INFO - Piecewise report saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\divided_87pts\piecewise_final_report.csv
+2026-03-08 23:12:20 - INFO - Selected file: Sensor2_25K_9K.csv
+2026-03-08 23:12:22 - INFO - Detected comma separator ','. Using dot '.' as decimal point.
+2026-03-08 23:12:22 - INFO - Data successfully loaded from: c:\users\g.szklarz\onedrive - intibs\direk-t\cryothermframework\data\Sensor2_25K_9K.csv
+2026-03-08 23:12:22 - INFO - Available columns: ['R', 'T']
+2026-03-08 23:12:22 - INFO - Successfully loaded 35 points from Sensor2_25K_9K.csv
+2026-03-08 23:12:22 - INFO - Comparison plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_raw_residuals_comparison.png
+2026-03-08 23:12:23 - INFO - Comparison plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_avg_residuals_comparison_5pts.png
+2026-03-08 23:12:23 - INFO - Raw residual comparison data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_residuals_comparison.csv
+2026-03-08 23:12:23 - INFO - Averaged residual comparison data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_residuals_comparison_avg_5pts.csv
+2026-03-08 23:12:40 - INFO - Boundary update detected: Rmin=6.5586562, Rmax=8.9004316
+2026-03-08 23:12:40 - INFO - --- Starting Analysis for Sensor2_4K_25K (87 points) ---
+2026-03-08 23:12:40 - INFO - Global max combined degree is 30. Based on N=87, dynamic limit is 30.
+2026-03-08 23:12:40 - INFO - Effective max combined degree for this scan is set to 30.
+2026-03-08 23:12:47 - INFO - Processing and saving report for n=2...
+2026-03-08 23:12:47 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_87pts_n2_statistics.csv
+2026-03-08 23:12:47 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_87pts_n2_parameters.csv
+2026-03-08 23:12:47 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_87pts_n2_best_fit.csv
+2026-03-08 23:12:49 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_87pts_n2_summary_plots.png
+2026-03-08 23:12:49 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:49 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_87pts_n2_87pts_standard_residuals.png
+2026-03-08 23:12:49 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_87pts_n2_87pts_qq_plot.png
+2026-03-08 23:12:49 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_2\Sensor2_4K_25K_87pts_n2_87pts_studentized_residuals.png
+2026-03-08 23:12:49 - INFO - Processing and saving report for n=3...
+2026-03-08 23:12:49 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_87pts_n3_statistics.csv
+2026-03-08 23:12:49 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_87pts_n3_parameters.csv
+2026-03-08 23:12:49 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_87pts_n3_best_fit.csv
+2026-03-08 23:12:50 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_87pts_n3_summary_plots.png
+2026-03-08 23:12:50 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:50 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_87pts_n3_87pts_standard_residuals.png
+2026-03-08 23:12:50 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_87pts_n3_87pts_qq_plot.png
+2026-03-08 23:12:50 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_3\Sensor2_4K_25K_87pts_n3_87pts_studentized_residuals.png
+2026-03-08 23:12:50 - INFO - Processing and saving report for n=4...
+2026-03-08 23:12:50 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_87pts_n4_statistics.csv
+2026-03-08 23:12:50 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_87pts_n4_parameters.csv
+2026-03-08 23:12:50 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_87pts_n4_best_fit.csv
+2026-03-08 23:12:51 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_87pts_n4_summary_plots.png
+2026-03-08 23:12:51 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:51 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_87pts_n4_87pts_standard_residuals.png
+2026-03-08 23:12:51 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_87pts_n4_87pts_qq_plot.png
+2026-03-08 23:12:52 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_4\Sensor2_4K_25K_87pts_n4_87pts_studentized_residuals.png
+2026-03-08 23:12:52 - INFO - Processing and saving report for n=5...
+2026-03-08 23:12:52 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_87pts_n5_statistics.csv
+2026-03-08 23:12:52 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_87pts_n5_parameters.csv
+2026-03-08 23:12:52 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_87pts_n5_best_fit.csv
+2026-03-08 23:12:52 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_87pts_n5_summary_plots.png
+2026-03-08 23:12:52 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:52 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_87pts_n5_87pts_standard_residuals.png
+2026-03-08 23:12:53 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_87pts_n5_87pts_qq_plot.png
+2026-03-08 23:12:53 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_5\Sensor2_4K_25K_87pts_n5_87pts_studentized_residuals.png
+2026-03-08 23:12:53 - INFO - Processing and saving report for n=6...
+2026-03-08 23:12:53 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_87pts_n6_statistics.csv
+2026-03-08 23:12:53 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_87pts_n6_parameters.csv
+2026-03-08 23:12:53 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_87pts_n6_best_fit.csv
+2026-03-08 23:12:54 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_87pts_n6_summary_plots.png
+2026-03-08 23:12:54 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:54 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_87pts_n6_87pts_standard_residuals.png
+2026-03-08 23:12:54 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_87pts_n6_87pts_qq_plot.png
+2026-03-08 23:12:54 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_6\Sensor2_4K_25K_87pts_n6_87pts_studentized_residuals.png
+2026-03-08 23:12:54 - INFO - Processing and saving report for n=7...
+2026-03-08 23:12:54 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_87pts_n7_statistics.csv
+2026-03-08 23:12:54 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_87pts_n7_parameters.csv
+2026-03-08 23:12:54 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_87pts_n7_best_fit.csv
+2026-03-08 23:12:55 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_87pts_n7_summary_plots.png
+2026-03-08 23:12:55 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:55 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_87pts_n7_87pts_standard_residuals.png
+2026-03-08 23:12:56 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_87pts_n7_87pts_qq_plot.png
+2026-03-08 23:12:56 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_7\Sensor2_4K_25K_87pts_n7_87pts_studentized_residuals.png
+2026-03-08 23:12:56 - INFO - Processing and saving report for n=8...
+2026-03-08 23:12:56 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_87pts_n8_statistics.csv
+2026-03-08 23:12:56 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_87pts_n8_parameters.csv
+2026-03-08 23:12:56 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_87pts_n8_best_fit.csv
+2026-03-08 23:12:57 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_87pts_n8_summary_plots.png
+2026-03-08 23:12:57 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:57 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_87pts_n8_87pts_standard_residuals.png
+2026-03-08 23:12:57 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_87pts_n8_87pts_qq_plot.png
+2026-03-08 23:12:57 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_8\Sensor2_4K_25K_87pts_n8_87pts_studentized_residuals.png
+2026-03-08 23:12:57 - INFO - Processing and saving report for n=9...
+2026-03-08 23:12:57 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_87pts_n9_statistics.csv
+2026-03-08 23:12:57 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_87pts_n9_parameters.csv
+2026-03-08 23:12:57 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_87pts_n9_best_fit.csv
+2026-03-08 23:12:58 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_87pts_n9_summary_plots.png
+2026-03-08 23:12:58 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:12:58 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_87pts_n9_87pts_standard_residuals.png
+2026-03-08 23:12:58 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_87pts_n9_87pts_qq_plot.png
+2026-03-08 23:12:59 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_9\Sensor2_4K_25K_87pts_n9_87pts_studentized_residuals.png
+2026-03-08 23:12:59 - INFO - Processing and saving report for n=10...
+2026-03-08 23:12:59 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_87pts_n10_statistics.csv
+2026-03-08 23:12:59 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_87pts_n10_parameters.csv
+2026-03-08 23:12:59 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_87pts_n10_best_fit.csv
+2026-03-08 23:13:00 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_87pts_n10_summary_plots.png
+2026-03-08 23:13:00 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:00 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_87pts_n10_87pts_standard_residuals.png
+2026-03-08 23:13:00 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_87pts_n10_87pts_qq_plot.png
+2026-03-08 23:13:00 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_10\Sensor2_4K_25K_87pts_n10_87pts_studentized_residuals.png
+2026-03-08 23:13:00 - INFO - Processing and saving report for n=11...
+2026-03-08 23:13:00 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_87pts_n11_statistics.csv
+2026-03-08 23:13:00 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_87pts_n11_parameters.csv
+2026-03-08 23:13:00 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_87pts_n11_best_fit.csv
+2026-03-08 23:13:01 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_87pts_n11_summary_plots.png
+2026-03-08 23:13:01 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:01 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_87pts_n11_87pts_standard_residuals.png
+2026-03-08 23:13:01 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_87pts_n11_87pts_qq_plot.png
+2026-03-08 23:13:02 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_11\Sensor2_4K_25K_87pts_n11_87pts_studentized_residuals.png
+2026-03-08 23:13:02 - INFO - Processing and saving report for n=12...
+2026-03-08 23:13:02 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_87pts_n12_statistics.csv
+2026-03-08 23:13:02 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_87pts_n12_parameters.csv
+2026-03-08 23:13:02 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_87pts_n12_best_fit.csv
+2026-03-08 23:13:02 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_87pts_n12_summary_plots.png
+2026-03-08 23:13:02 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:03 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_87pts_n12_87pts_standard_residuals.png
+2026-03-08 23:13:03 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_87pts_n12_87pts_qq_plot.png
+2026-03-08 23:13:03 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_12\Sensor2_4K_25K_87pts_n12_87pts_studentized_residuals.png
+2026-03-08 23:13:03 - INFO - Processing and saving report for n=13...
+2026-03-08 23:13:03 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_87pts_n13_statistics.csv
+2026-03-08 23:13:03 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_87pts_n13_parameters.csv
+2026-03-08 23:13:03 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_87pts_n13_best_fit.csv
+2026-03-08 23:13:04 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_87pts_n13_summary_plots.png
+2026-03-08 23:13:04 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:04 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_87pts_n13_87pts_standard_residuals.png
+2026-03-08 23:13:04 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_87pts_n13_87pts_qq_plot.png
+2026-03-08 23:13:04 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_13\Sensor2_4K_25K_87pts_n13_87pts_studentized_residuals.png
+2026-03-08 23:13:04 - INFO - Processing and saving report for n=14...
+2026-03-08 23:13:04 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_87pts_n14_statistics.csv
+2026-03-08 23:13:04 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_87pts_n14_parameters.csv
+2026-03-08 23:13:04 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_87pts_n14_best_fit.csv
+2026-03-08 23:13:05 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_87pts_n14_summary_plots.png
+2026-03-08 23:13:05 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:06 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_87pts_n14_87pts_standard_residuals.png
+2026-03-08 23:13:06 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_87pts_n14_87pts_qq_plot.png
+2026-03-08 23:13:06 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_14\Sensor2_4K_25K_87pts_n14_87pts_studentized_residuals.png
+2026-03-08 23:13:06 - INFO - Processing and saving report for n=15...
+2026-03-08 23:13:06 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_87pts_n15_statistics.csv
+2026-03-08 23:13:06 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_87pts_n15_parameters.csv
+2026-03-08 23:13:06 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_87pts_n15_best_fit.csv
+2026-03-08 23:13:07 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_87pts_n15_summary_plots.png
+2026-03-08 23:13:07 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:07 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_87pts_n15_87pts_standard_residuals.png
+2026-03-08 23:13:07 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_87pts_n15_87pts_qq_plot.png
+2026-03-08 23:13:08 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_15\Sensor2_4K_25K_87pts_n15_87pts_studentized_residuals.png
+2026-03-08 23:13:08 - INFO - Processing and saving report for n=16...
+2026-03-08 23:13:08 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_87pts_n16_statistics.csv
+2026-03-08 23:13:08 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_87pts_n16_parameters.csv
+2026-03-08 23:13:08 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_87pts_n16_best_fit.csv
+2026-03-08 23:13:08 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_87pts_n16_summary_plots.png
+2026-03-08 23:13:08 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:09 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_87pts_n16_87pts_standard_residuals.png
+2026-03-08 23:13:09 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_87pts_n16_87pts_qq_plot.png
+2026-03-08 23:13:09 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_16\Sensor2_4K_25K_87pts_n16_87pts_studentized_residuals.png
+2026-03-08 23:13:09 - INFO - Processing and saving report for n=17...
+2026-03-08 23:13:09 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_87pts_n17_statistics.csv
+2026-03-08 23:13:09 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_87pts_n17_parameters.csv
+2026-03-08 23:13:09 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_87pts_n17_best_fit.csv
+2026-03-08 23:13:10 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_87pts_n17_summary_plots.png
+2026-03-08 23:13:10 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:10 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_87pts_n17_87pts_standard_residuals.png
+2026-03-08 23:13:10 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_87pts_n17_87pts_qq_plot.png
+2026-03-08 23:13:10 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_17\Sensor2_4K_25K_87pts_n17_87pts_studentized_residuals.png
+2026-03-08 23:13:10 - INFO - Processing and saving report for n=18...
+2026-03-08 23:13:10 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_87pts_n18_statistics.csv
+2026-03-08 23:13:10 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_87pts_n18_parameters.csv
+2026-03-08 23:13:10 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_87pts_n18_best_fit.csv
+2026-03-08 23:13:11 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_87pts_n18_summary_plots.png
+2026-03-08 23:13:11 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:11 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_87pts_n18_87pts_standard_residuals.png
+2026-03-08 23:13:11 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_87pts_n18_87pts_qq_plot.png
+2026-03-08 23:13:12 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_18\Sensor2_4K_25K_87pts_n18_87pts_studentized_residuals.png
+2026-03-08 23:13:12 - INFO - Processing and saving report for n=19...
+2026-03-08 23:13:12 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_87pts_n19_statistics.csv
+2026-03-08 23:13:12 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_87pts_n19_parameters.csv
+2026-03-08 23:13:12 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_87pts_n19_best_fit.csv
+2026-03-08 23:13:13 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_87pts_n19_summary_plots.png
+2026-03-08 23:13:13 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:13 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_87pts_n19_87pts_standard_residuals.png
+2026-03-08 23:13:13 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_87pts_n19_87pts_qq_plot.png
+2026-03-08 23:13:13 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_19\Sensor2_4K_25K_87pts_n19_87pts_studentized_residuals.png
+2026-03-08 23:13:13 - INFO - Processing and saving report for n=20...
+2026-03-08 23:13:13 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_87pts_n20_statistics.csv
+2026-03-08 23:13:13 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_87pts_n20_parameters.csv
+2026-03-08 23:13:13 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_87pts_n20_best_fit.csv
+2026-03-08 23:13:14 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_87pts_n20_summary_plots.png
+2026-03-08 23:13:14 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:14 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_87pts_n20_87pts_standard_residuals.png
+2026-03-08 23:13:14 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_87pts_n20_87pts_qq_plot.png
+2026-03-08 23:13:15 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_20\Sensor2_4K_25K_87pts_n20_87pts_studentized_residuals.png
+2026-03-08 23:13:15 - INFO - Processing and saving report for n=21...
+2026-03-08 23:13:15 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_87pts_n21_statistics.csv
+2026-03-08 23:13:15 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_87pts_n21_parameters.csv
+2026-03-08 23:13:15 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_87pts_n21_best_fit.csv
+2026-03-08 23:13:15 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_87pts_n21_summary_plots.png
+2026-03-08 23:13:15 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:16 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_87pts_n21_87pts_standard_residuals.png
+2026-03-08 23:13:16 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_87pts_n21_87pts_qq_plot.png
+2026-03-08 23:13:16 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_21\Sensor2_4K_25K_87pts_n21_87pts_studentized_residuals.png
+2026-03-08 23:13:16 - INFO - Processing and saving report for n=22...
+2026-03-08 23:13:16 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_87pts_n22_statistics.csv
+2026-03-08 23:13:16 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_87pts_n22_parameters.csv
+2026-03-08 23:13:16 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_87pts_n22_best_fit.csv
+2026-03-08 23:13:17 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_87pts_n22_summary_plots.png
+2026-03-08 23:13:17 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:17 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_87pts_n22_87pts_standard_residuals.png
+2026-03-08 23:13:17 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_87pts_n22_87pts_qq_plot.png
+2026-03-08 23:13:18 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_22\Sensor2_4K_25K_87pts_n22_87pts_studentized_residuals.png
+2026-03-08 23:13:18 - INFO - Processing and saving report for n=23...
+2026-03-08 23:13:18 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_87pts_n23_statistics.csv
+2026-03-08 23:13:18 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_87pts_n23_parameters.csv
+2026-03-08 23:13:18 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_87pts_n23_best_fit.csv
+2026-03-08 23:13:18 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_87pts_n23_summary_plots.png
+2026-03-08 23:13:18 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:19 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_87pts_n23_87pts_standard_residuals.png
+2026-03-08 23:13:19 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_87pts_n23_87pts_qq_plot.png
+2026-03-08 23:13:19 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_23\Sensor2_4K_25K_87pts_n23_87pts_studentized_residuals.png
+2026-03-08 23:13:19 - INFO - Processing and saving report for n=24...
+2026-03-08 23:13:19 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_87pts_n24_statistics.csv
+2026-03-08 23:13:19 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_87pts_n24_parameters.csv
+2026-03-08 23:13:19 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_87pts_n24_best_fit.csv
+2026-03-08 23:13:20 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_87pts_n24_summary_plots.png
+2026-03-08 23:13:20 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:20 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_87pts_n24_87pts_standard_residuals.png
+2026-03-08 23:13:20 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_87pts_n24_87pts_qq_plot.png
+2026-03-08 23:13:20 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_24\Sensor2_4K_25K_87pts_n24_87pts_studentized_residuals.png
+2026-03-08 23:13:20 - INFO - Processing and saving report for n=25...
+2026-03-08 23:13:20 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_87pts_n25_statistics.csv
+2026-03-08 23:13:20 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_87pts_n25_parameters.csv
+2026-03-08 23:13:20 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_87pts_n25_best_fit.csv
+2026-03-08 23:13:21 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_87pts_n25_summary_plots.png
+2026-03-08 23:13:21 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:22 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_87pts_n25_87pts_standard_residuals.png
+2026-03-08 23:13:22 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_87pts_n25_87pts_qq_plot.png
+2026-03-08 23:13:22 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_25\Sensor2_4K_25K_87pts_n25_87pts_studentized_residuals.png
+2026-03-08 23:13:22 - INFO - Processing and saving report for n=26...
+2026-03-08 23:13:22 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_87pts_n26_statistics.csv
+2026-03-08 23:13:22 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_87pts_n26_parameters.csv
+2026-03-08 23:13:22 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_87pts_n26_best_fit.csv
+2026-03-08 23:13:23 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_87pts_n26_summary_plots.png
+2026-03-08 23:13:23 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:23 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_87pts_n26_87pts_standard_residuals.png
+2026-03-08 23:13:23 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_87pts_n26_87pts_qq_plot.png
+2026-03-08 23:13:23 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_26\Sensor2_4K_25K_87pts_n26_87pts_studentized_residuals.png
+2026-03-08 23:13:23 - INFO - Processing and saving report for n=27...
+2026-03-08 23:13:23 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_87pts_n27_statistics.csv
+2026-03-08 23:13:23 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_87pts_n27_parameters.csv
+2026-03-08 23:13:23 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_87pts_n27_best_fit.csv
+2026-03-08 23:13:24 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_87pts_n27_summary_plots.png
+2026-03-08 23:13:24 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:24 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_87pts_n27_87pts_standard_residuals.png
+2026-03-08 23:13:24 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_87pts_n27_87pts_qq_plot.png
+2026-03-08 23:13:25 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_27\Sensor2_4K_25K_87pts_n27_87pts_studentized_residuals.png
+2026-03-08 23:13:25 - INFO - Processing and saving report for n=28...
+2026-03-08 23:13:25 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_87pts_n28_statistics.csv
+2026-03-08 23:13:25 - INFO - Rational parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_87pts_n28_parameters.csv
+2026-03-08 23:13:25 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_87pts_n28_best_fit.csv
+2026-03-08 23:13:25 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_87pts_n28_summary_plots.png
+2026-03-08 23:13:25 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:26 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_87pts_n28_87pts_standard_residuals.png
+2026-03-08 23:13:26 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_87pts_n28_87pts_qq_plot.png
+2026-03-08 23:13:26 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\n_28\Sensor2_4K_25K_87pts_n28_87pts_studentized_residuals.png
+2026-03-08 23:13:26 - INFO - Full statistics summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_full_scan_statistics.csv
+2026-03-08 23:13:26 - INFO - Summary of best 'm' per 'n' (criterion: aic) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_m_per_n_aic_criterion.csv
+2026-03-08 23:13:27 - INFO - Final summary plot (AIC) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_summary_plots_aic_criterion.png
+2026-03-08 23:13:28 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_aic_best_fit.csv
+2026-03-08 23:13:28 - INFO - Report created with R_ref=None
+2026-03-08 23:13:28 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:28 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_aic_87pts_standard_residuals.png
+2026-03-08 23:13:28 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_aic_87pts_qq_plot.png
+2026-03-08 23:13:28 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_aic_87pts_studentized_residuals.png
+2026-03-08 23:13:28 - INFO - Summary of best 'm' per 'n' (criterion: sum_of_absolute_residuals) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_m_per_n_abs_criterion.csv
+2026-03-08 23:13:29 - INFO - Final summary plot (Sum of Absolute Residuals) saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_summary_plots_abs_criterion.png
+2026-03-08 23:13:30 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_abs_best_fit.csv
+2026-03-08 23:13:30 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 23:13:30 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_abs_87pts_standard_residuals.png
+2026-03-08 23:13:30 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_abs_87pts_qq_plot.png
+2026-03-08 23:13:30 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_best_abs_87pts_studentized_residuals.png
+2026-03-08 23:13:40 - INFO - Selected file: Sensor2_25K_9K.csv
+2026-03-08 23:13:42 - INFO - Detected comma separator ','. Using dot '.' as decimal point.
+2026-03-08 23:13:42 - INFO - Data successfully loaded from: c:\users\g.szklarz\onedrive - intibs\direk-t\cryothermframework\data\Sensor2_25K_9K.csv
+2026-03-08 23:13:42 - INFO - Available columns: ['R', 'T']
+2026-03-08 23:13:42 - INFO - Successfully loaded 35 points from Sensor2_25K_9K.csv
+2026-03-08 23:13:42 - INFO - Comparison plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_raw_residuals_comparison.png
+2026-03-08 23:13:42 - INFO - Comparison plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_avg_residuals_comparison_5pts.png
+2026-03-08 23:13:42 - INFO - Raw residual comparison data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_residuals_comparison.csv
+2026-03-08 23:13:42 - INFO - Averaged residual comparison data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CryoThermFramework\results\Sensor2_4K_25K\Rational_Function\x_scaled\Sensor2_4K_25K_87pts_residuals_comparison_avg_5pts.csv
+2026-03-08 23:22:54 - INFO - Selected file: Sensor3.csv
+2026-03-08 23:22:54 - INFO - Detected comma separator ','. Using dot '.' as decimal point.
+2026-03-08 23:22:54 - INFO - Data successfully loaded from: c:\users\g.szklarz\onedrive - intibs\direk-t\cryothermframework\data\Sensor3.csv
+2026-03-08 23:22:54 - INFO - Available columns: ['R', 'Rstd', 'T', 'Tstd']
+2026-03-08 23:22:54 - INFO - Successfully loaded 32 points from Sensor3.csv

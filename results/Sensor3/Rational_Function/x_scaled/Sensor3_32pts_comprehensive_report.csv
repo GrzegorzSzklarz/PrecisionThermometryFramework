@@ -1,0 +1,27 @@
+PARAMETER,VALUE,UNIT,COMMENT
+Function_Type,Rational Function,-,Model type
+X_Transformation,x = R (Raw Resistance),-,Representation
+,,,
+--- LIMITS ---,-,-,-
+T_LIMIT_LOW,5.9679,K,Min temperature
+T_LIMIT_HIGH,24.5561,K,Max temperature
+R_MIN,7.512127225000e+00,Ohm,Min resistance
+R_MAX,9.664139352000e+00,Ohm,Max resistance
+--- DIAGNOSTICS ---,-,-,-
+MODEL_STRUCTURE,n=2 m=8,-,Rational order
+TRANS_METHOD,x = (R-Rmin)/(Rmax-Rmin),-,Scaling formula
+REDUCED_CHI_SQUARED,17.7107,-,-
+AIC,-545.6776,-,-
+BIC,-529.5545,-,-
+--- MODEL ---,-,-,-
+N_0,+5.967915858216e+00,4.551374e-05,Numerator
+N_1,-1.180888168579e+01,4.410182e-01,Numerator
+N_2,+5.149193723060e+01,5.604903e-01,Numerator
+M_1,-4.910750874940e+00,7.350783e-02,Denominator
+M_2,+2.011580681925e+01,2.185811e-01,Denominator
+M_3,-4.476640157280e+01,4.187750e-01,Denominator
+M_4,+7.426050801663e+01,6.535370e-01,Denominator
+M_5,-8.401871093678e+01,9.816640e-01,Denominator
+M_6,+6.118887647648e+01,9.873975e-01,Denominator
+M_7,-2.576198732427e+01,5.335769e-01,Denominator
+M_8,+4.751707427239e+00,1.185900e-01,Denominator

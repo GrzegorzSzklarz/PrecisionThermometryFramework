@@ -1,0 +1,31 @@
+PARAMETER,VALUE,UNIT,COMMENT
+Function_Type,Z-function (N-th degree polynomial),-,Model type
+X_Transformation,not_set,-,Representation
+,,,
+--- LIMITS ---,-,-,-
+T_LIMIT_LOW,4.3847,K,Min temperature
+T_LIMIT_HIGH,25.1382,K,Max temperature
+R_MIN,6.520679200000e+00,Ohm,Min resistance
+R_MAX,8.900431600000e+00,Ohm,Max resistance
+--- DIAGNOSTICS ---,-,-,-
+POLYNOMIAL_DEGREE,15,-,Polynomial degree
+REDUCED_CHI_SQUARED,0.4957,-,-
+AIC,-1258.8442,-,-
+BIC,-1219.0260,-,-
+--- MODEL ---,-,-,-
+A0,+1.687964790292e+01,3.346583e-04,Coefficient
+A1,+1.103838912651e+01,3.428316e-03,Coefficient
+A2,-4.114383537355e+00,1.784534e-02,Coefficient
+A3,+1.337319730507e+00,1.001084e-01,Coefficient
+A4,+4.348430394684e-01,2.538097e-01,Coefficient
+A5,-7.204948927103e-01,1.007784e+00,Coefficient
+A6,+6.586771451875e+00,1.484807e+00,Coefficient
+A7,-1.431980784246e+01,4.734505e+00,Coefficient
+A8,-9.124202836145e+00,4.271608e+00,Coefficient
+A9,+3.706054498336e+01,1.169379e+01,Coefficient
+A10,+4.891402552484e+00,6.388197e+00,Coefficient
+A11,-4.406579045769e+01,1.562692e+01,Coefficient
+A12,-4.734379811867e-01,4.760894e+00,Coefficient
+A13,+2.656788911276e+01,1.067635e+01,Coefficient
+A14,-3.193545274027e-01,1.396484e+00,Coefficient
+A15,-6.521379149912e+00,2.920353e+00,Coefficient

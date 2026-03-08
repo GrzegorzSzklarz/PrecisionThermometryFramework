@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Szklarz"
+    given-names: "Grzegorz"
+    orcid: "https://orcid.org/0000-0002-9657-8055"
+title: "PrecisionThermometryFramework: Analytical framework for high-precision sensor calibration"
+version: 1.0.0
+doi: "10.5281/zenodo.0000000" # Zaktualizuj po wrzuceniu na Zenodo
+date-released: 2026-03-08
+url: "https://github.com/GrzegorzSzklarz/PrecisionThermometryFramework"
+repository-code: "https://github.com/GrzegorzSzklarz/PrecisionThermometryFramework"
+keywords:
+  - thermometry
+  - sensor-calibration
+  - its-90
+  - pade-approximant
+  - metrology
+  - cryogenic-thermometry
+license: MIT

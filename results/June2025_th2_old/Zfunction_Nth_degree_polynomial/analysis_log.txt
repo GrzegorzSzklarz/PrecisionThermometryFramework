@@ -1,0 +1,38 @@
+2026-03-08 16:09:29 - INFO - Max degree for this dataset is dynamically set to 12 (based on N/3 rule and global max).
+2026-03-08 16:09:29 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_best_abs_best_fit.csv
+2026-03-08 16:09:29 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 16:09:30 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_best_abs_34pts_standard_residuals.png
+2026-03-08 16:09:30 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_best_abs_34pts_qq_plot.png
+2026-03-08 16:09:30 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_best_abs_34pts_studentized_residuals.png
+2026-03-08 16:09:31 - INFO - Summary plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_summary_plots.png
+2026-03-08 16:09:31 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 16:09:31 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_34pts_standard_residuals.png
+2026-03-08 16:09:31 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_34pts_qq_plot.png
+2026-03-08 16:09:31 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_34pts_studentized_residuals.png
+2026-03-08 16:09:31 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_statistics.csv
+2026-03-08 16:09:31 - INFO - Parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_34pts_parameters.csv
+2026-03-08 16:09:31 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\June2025_th2_old_34pts_best_fit.csv
+2026-03-08 16:09:31 - INFO - Report created with R_ref=None
+2026-03-08 16:09:39 - INFO - Max degree for this dataset is dynamically set to 7 (based on N/3 rule and global max).
+2026-03-08 16:09:39 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_1\June2025_th2_old_16pts_best_abs_best_fit.csv
+2026-03-08 16:09:39 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 16:09:39 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_1\June2025_th2_old_16pts_best_abs_16pts_standard_residuals.png
+2026-03-08 16:09:39 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_1\June2025_th2_old_16pts_best_abs_16pts_qq_plot.png
+2026-03-08 16:09:39 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_1\June2025_th2_old_16pts_best_abs_16pts_studentized_residuals.png
+2026-03-08 16:09:39 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_1\June2025_th2_old_16pts_statistics.csv
+2026-03-08 16:09:39 - INFO - Parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_1\June2025_th2_old_16pts_16pts_parameters.csv
+2026-03-08 16:09:39 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_1\June2025_th2_old_16pts_best_fit.csv
+2026-03-08 16:09:39 - INFO - Max degree for this dataset is dynamically set to 8 (based on N/3 rule and global max).
+2026-03-08 16:09:39 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_2\June2025_th2_old_19pts_best_abs_best_fit.csv
+2026-03-08 16:09:39 - INFO - Generating standalone diagnostic plots (background mode)...
+2026-03-08 16:09:40 - INFO - Standard residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_2\June2025_th2_old_19pts_best_abs_19pts_standard_residuals.png
+2026-03-08 16:09:40 - INFO - Q-Q plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_2\June2025_th2_old_19pts_best_abs_19pts_qq_plot.png
+2026-03-08 16:09:40 - INFO - Studentized residuals plot saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_2\June2025_th2_old_19pts_best_abs_19pts_studentized_residuals.png
+2026-03-08 16:09:40 - INFO - Statistics saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_2\June2025_th2_old_19pts_statistics.csv
+2026-03-08 16:09:40 - INFO - Parameters saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_2\June2025_th2_old_19pts_19pts_parameters.csv
+2026-03-08 16:09:40 - INFO - Best fit data saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Segment_2\June2025_th2_old_19pts_best_fit.csv
+2026-03-08 16:09:40 - INFO - Initial Knot Gap at 15.48254601K: 0.020 mK
+2026-03-08 16:09:40 - INFO - Stitched dataset exported to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Piecewise_Model_stitched_full_data.csv
+2026-03-08 16:09:41 - INFO - Piecewise diagnostics plot saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Piecewise Model_piecewise_diagnostics.png
+2026-03-08 16:09:42 - INFO - Global 3-panel piecewise summary saved to: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\Piecewise Model_global_3panel_summary.png
+2026-03-08 16:09:42 - INFO - Piecewise report saved: C:\Users\g.szklarz\OneDrive - INTiBS\Direk-T\CalibrationFramwork\results\June2025_th2_old\Zfunction_Nth_degree_polynomial\divided_34pts\piecewise_final_report.csv

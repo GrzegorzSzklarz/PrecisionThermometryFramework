@@ -1,0 +1,14 @@
+name: calibration_framework
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.13
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - statsmodels
+  - tqdm
+  - pip
+
