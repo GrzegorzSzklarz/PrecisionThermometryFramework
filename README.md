@@ -24,8 +24,6 @@ The framework is designed to be flexible. Your input CSV can use either Western 
 
 ## 📊 Visual Examples
 
-*Replace the path below with your actual image path once uploaded to GitHub.*
-
 <p align="center">
   <img src="examples/Sensor2_4K_25K_89pts_summary_plots_aic_criterion.png" width="800" alt="Calibration Residuals Plot">
   <br>
