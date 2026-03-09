@@ -67,33 +67,33 @@ You can set up the environment using either **Anaconda (Recommended)** or standa
 
 ### Option A: Anaconda / Miniconda
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/YourUsername/PrecisionThermometryFramework.git
    cd CalibrationFramework
-   \`\`\`
+   ```
 2. Create the virtual environment from the YAML file:
-   \`\`\`bash
+   ```bash
    conda env create -f environment.yml
-   \`\`\`
+   ```
 3. Activate the environment:
-   \`\`\`bash
+   ```bash
    conda activate calibration_framework
-   \`\`\`
+   ```
 
 ### Option B: pip
 1. Clone the repository and navigate to the folder.
 2. Install the required dependencies:
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 ## ⚙️ Usage
 
 To launch the interactive calibration suite, simply run the main script from your terminal:
 
-\`\`\`bash
+```bash
 python main.py
-\`\`\`
+```
 
 Follow the on-screen CLI prompts to:
 1. Load a dataset from the `data/` folder.
