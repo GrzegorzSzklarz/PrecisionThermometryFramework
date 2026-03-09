@@ -6,7 +6,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-9657-8055"
 title: "PrecisionThermometryFramework: Analytical framework for high-precision sensor calibration"
 version: 1.0.0a
-doi: "10.5281/zenodo.18924874" 
+doi: "10.5281/zenodo.18921803" 
 date-released: 2026-03-09
 url: "https://github.com/GrzegorzSzklarz/PrecisionThermometryFramework"
 repository-code: "https://github.com/GrzegorzSzklarz/PrecisionThermometryFramework"
