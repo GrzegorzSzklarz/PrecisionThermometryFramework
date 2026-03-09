@@ -3,7 +3,7 @@
 **PrecisionThermometryFramework** is a high-performance metrological suite designed for the rigorous demands of **high-precision thermometry**. While optimized for the extreme challenges of the cryogenic range, the framework provides a universal analytical engine suitable for any high-accuracy temperature sensor calibration (SPRTs, PRTs, Diodes, etc.) across a broad temperature ranges.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18924874.svg)](https://doi.org/10.5281/zenodo.18924874)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18924874.svg)](https://doi.org/10.5281/zenodo.18921803)
 [![Paper: Under Review](https://img.shields.io/badge/Paper-Under--Review-orange.svg)]()
 
 ## 🔬 Key Features
@@ -118,7 +118,7 @@ The `examples/` directory provides a comprehensive validation suite for high-pre
 While the software was developed exclusively by **Grzegorz Szklarz**, the methodology and research context are described in the following publication. If you use this framework, please cite both the software and the paper:
 
 **Software Citation:**
-> Szklarz, G. (2026). PrecisionThermometryFramework (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18924874
+> Szklarz, G. (2026). PrecisionThermometryFramework (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18921803
 
 **Paper Citation:**
 > Szklarz, G., Nikonkov, R., and Kowal, A., "Analytical framework for high-precision cryogenic thermometry: Characterization of RhFe and PtCo sensors below 25 K", *[Journal Name]*, (Under Review, 2026).
