@@ -3,7 +3,7 @@
 **PrecisionThermometryFramework** is a high-performance metrological suite designed for the rigorous demands of **high-precision thermometry**. While optimized for the extreme challenges of the cryogenic range, the framework provides a universal analytical engine suitable for any high-accuracy temperature sensor calibration (SPRTs, PRTs, Diodes, etc.) across a broad temperature ranges.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18924874.svg)](https://doi.org/10.5281/zenodo.18921803)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18921803.svg)](https://doi.org/10.5281/zenodo.18921803)
 [![Paper: Under Review](https://img.shields.io/badge/Paper-Under--Review-orange.svg)]()
 
 ## 🔬 Key Features
