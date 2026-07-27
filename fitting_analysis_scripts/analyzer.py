@@ -167,10 +167,30 @@ def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, s
             ss_residual = np.sum(residuals_set**2)
             ss_total = np.sum((y_data_set - np.mean(y_data_set))**2)
             r_squared = 1 - (ss_residual / ss_total) if ss_total > 0 else np.nan
-            chi_squared = np.sum((residuals_set / sigma_for_fit_and_chi2)**2)
-            reduced_chi_squared = chi_squared / degrees_of_freedom if degrees_of_freedom > 0 else np.nan
-            aic = 2 * k + n * np.log(ss_residual / n) if ss_residual > 0 and n > 0 else np.inf
-            bic = k * np.log(n) + n * np.log(ss_residual / n) if ss_residual > 0 and n > 0 else np.inf
+            
+            # checking std_y values are known and correct ---
+            has_valid_sigma = (
+                std_y_set is not None 
+                and len(std_y_set) == n 
+                and not np.all(std_y_set == 1.0)
+                and np.all(std_y_set > 0)
+            )
+            
+            if has_valid_sigma:
+                chi_squared = np.sum((residuals_set / std_y_set)**2)
+                reduced_chi_squared = chi_squared / degrees_of_freedom if degrees_of_freedom > 0 else np.nan
+                
+                aic = chi_squared + 2 * k
+                bic = chi_squared + k * np.log(n)
+            else:
+                chi_squared = ss_residual  #for consistency
+                reduced_chi_squared = ss_residual / degrees_of_freedom if degrees_of_freedom > 0 else np.nan
+                
+                if ss_residual > 0 and n > 0:
+                    aic = 2 * k + n * np.log(ss_residual / n)
+                    bic = k * np.log(n) + n * np.log(ss_residual / n)
+                else:
+                    aic, bic = np.inf, np.inf
 
             # --- Advanced Residual Diagnostics ---
             adv_stats = {'studentized_residuals': None}
