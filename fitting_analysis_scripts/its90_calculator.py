@@ -175,30 +175,99 @@ def get_integrated_correction(T_meas, T_target, R_tpw, coeffs_dict, terms):
 # --- 3. CALIBRATION & INVERSION ---
 # ==========================================
 
-def calculate_deviation_coeffs(range_id, measured_readings):
+def calculate_deviation_coeffs(range_id: str, measured_readings: dict, std_readings: dict = None):
     """
-    Computes PRT-specific coefficients (a, b, c...) by solving the linear system
-    at fixed points. Uses linalg.solve or least-squares.
+    Computes PRT-specific deviation function coefficients (a, b, c...) according to ITS-90.
+    
+    Includes uncertainty propagation (covariance matrix calculation) and optional 
+    Weighted Least Squares (WLS) fitting if standard deviations are provided.
+
+    Args:
+        range_id (str): Sub-range identifier key (e.g., '1', '2', '8').
+        measured_readings (dict): Dictionary mapping fixed point names (e.g., 'Hg', 'Ga') 
+                                  to measured resistance values R [Ohm]. Must include 'H2O'.
+        std_readings (dict, optional): Dictionary mapping fixed point names to standard 
+                                       uncertainties u(R) [Ohm].
+
+    Returns:
+        tuple: 
+            - coeffs_dict (dict or None): Calculated deviation coefficients {'a': val, 'b': val, ...}.
+            - cov_matrix (np.ndarray or None): Parameter covariance matrix Cov(params) for GUM uncertainty propagation.
     """
+    if 'H2O' not in measured_readings:
+        logging.error("Water Triple Point ('H2O') reading is missing.")
+        return None, None
+
     r_tpw = measured_readings['H2O']
     range_info = SUB_RANGES[range_id]
     pts = range_info['points']
     
+    # 1. Compute measured resistance ratios (W) and reference ratios (Wr)
     W_meas = {p: measured_readings[p] / r_tpw for p in pts}
     W_ref = {p: FIXED_POINTS_DATA[p]['Wr'] for p in pts}
 
+    # Difference vector b = W_meas - W_ref (deviation ΔW at fixed points)
     b_vector = np.array([W_meas[p] - W_ref[p] for p in pts])
+    
+    # Design matrix A based on ITS-90 sub-range deviation polynomial terms
     A_matrix = np.array([[_evaluate_deviation_term(W_meas[p], term) for term in range_info['terms']] for p in pts])
     
+    # 2. Setup weighting matrix W_weight based on measurement uncertainties u(R)
+    use_wls = False
+    if std_readings is not None and 'H2O' in std_readings:
+        u_rtpw = std_readings['H2O']
+        # Propagate u(R) and u(R_tpw) to uncertainty of resistance ratio u(W):
+        # (u(W)/W)^2 = (u(R)/R)^2 + (u(R_tpw)/R_tpw)^2
+        u_W_vec = []
+        for p in pts:
+            u_r = std_readings.get(p, 1e-6)  # Fallback to 1 uOhm if not provided
+            u_W = W_meas[p] * np.sqrt((u_r / measured_readings[p])**2 + (u_rtpw / r_tpw)**2)
+            u_W_vec.append(u_W)
+        
+        u_W_vec = np.array(u_W_vec)
+        # Weight matrix is the inverse of the variance (diagonal covariance matrix of W)
+        weights = 1.0 / np.maximum(u_W_vec**2, 1e-15)
+        W_weight = np.diag(weights)
+        use_wls = True
+
     try:
+        # 3. Solve for deviation coefficients and evaluate Covariance Matrix
         if A_matrix.shape[0] == A_matrix.shape[1]:
-            coeffs_vector = np.linalg.solve(A_matrix, b_vector)
+            # Exact-fit system (Number of fixed points equals number of parameters)
+            if use_wls:
+                # Weighted exact solution: (A^T * W * A)^(-1) * A^T * W * b
+                AT_W = A_matrix.T @ W_weight
+                cov_matrix = np.linalg.inv(AT_W @ A_matrix)
+                coeffs_vector = cov_matrix @ AT_W @ b_vector
+            else:
+                # Standard unweighted linear solve
+                coeffs_vector = np.linalg.solve(A_matrix, b_vector)
+                cov_matrix = np.linalg.inv(A_matrix.T @ A_matrix)
         else:
-            coeffs_vector = np.linalg.lstsq(A_matrix, b_vector, rcond=None)[0]
-        return {chr(97 + i): val for i, val in enumerate(coeffs_vector)}
-    except np.linalg.LinAlgError:
-        logging.error(f"Linear algebra error in range {range_id}")
-        return None
+            # Overdetermined system (Least-Squares Regression)
+            if use_wls:
+                # Weighted Least Squares (WLS): Cov = (A^T * W * A)^(-1)
+                AT_W = A_matrix.T @ W_weight
+                cov_matrix = np.linalg.pinv(AT_W @ A_matrix)
+                coeffs_vector = cov_matrix @ AT_W @ b_vector
+            else:
+                # Ordinary Least Squares (OLS) via Pseudo-Inverse
+                coeffs_vector, residuals, rank, s = np.linalg.lstsq(A_matrix, b_vector, rcond=None)
+                cov_matrix = np.linalg.pinv(A_matrix.T @ A_matrix)
+                
+                # Scale covariance by residual variance if overdetermined OLS
+                if len(b_vector) > A_matrix.shape[1]:
+                    dof = len(b_vector) - A_matrix.shape[1]
+                    s_sq = np.sum((b_vector - A_matrix @ coeffs_vector)**2) / dof
+                    cov_matrix *= s_sq
+
+        # Map vector solution back to coefficient names ('a', 'b', 'c'...)
+        coeffs_dict = {chr(97 + i): val for i, val in enumerate(coeffs_vector)}
+        return coeffs_dict, cov_matrix
+
+    except np.linalg.LinAlgError as e:
+        logging.error(f"Linear algebra convergence error in ITS-90 range {range_id}: {e}")
+        return None, None
 
 def calculate_temperature(R_measured, r_tpw, range_id, coeffs):
     """Converts Resistance to T90 [K] using reference functions and deviation."""

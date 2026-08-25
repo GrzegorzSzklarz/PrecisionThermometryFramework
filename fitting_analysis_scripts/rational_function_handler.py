@@ -29,6 +29,7 @@ import sys
 import matplotlib.pyplot as plt
 from multiprocessing import Pool, cpu_count
 from tqdm import tqdm
+from scipy.optimize._numdiff import approx_derivative
 
 import fitting_analysis_scripts.logger_setup as logger_setup
 import fitting_analysis_scripts.data_saver as data_saver
@@ -135,10 +136,16 @@ def _run_single_fit(x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, st
         k, dof = len(params), N - len(params)
         ss_residual = np.sum(residuals**2)
         ss_total = np.sum((y_data - np.mean(y_data))**2)
+        
+        u_fit_vec = calculate_rational_fit_uncertainty(
+            x_data, n, m, b0_is_zero, params, cov_matrix
+        )
 
         results = {
             'params': params, 
             'param_errors': perr, 
+            'cov_matrix': cov_matrix,
+            'u_fit_vector': u_fit_vec,
             'residuals': residuals, 
             'y_fit': y_fit,
             'r_squared': 1 - (ss_residual / ss_total) if ss_total > 0 else np.nan,
@@ -439,6 +446,8 @@ def _run_full_rational_scan_for_subset(data_label, y_data_set, std_y_set, x_raw_
             **results_for_n[best_m], 
             'n': n, 
             'm': best_m,
+            'cov_matrix': results_for_n[best_m].get('cov_matrix'),     
+            'u_fit_vector': results_for_n[best_m].get('u_fit_vector'),
             'x_raw_data': x_norm, 
             'x_untransformed_data': x_untransformed_set, 
             'y_data_data': y_data_set, 
@@ -527,7 +536,39 @@ def _run_fixed_rational_fit_for_variability(data_label, y_data_set, std_y_set, x
             output_dir=output_dir, file_base_name=data_label, 
             xlabel='Normalized X', degree_label="n+m=", show_plot=True
         )
+
+def calculate_rational_fit_uncertainty(x_data, n_degree, m_degree, b0_is_zero, params, cov_matrix):
+    """
+    Directly evaluates GUM fit uncertainty for Rational Functions P(x)/Q(x).
+    """
+    if cov_matrix is None or np.isinf(cov_matrix).any():
+        return np.zeros_like(x_data)
+
+    def rational_eval(x_val, p):
+        num_p = n_degree + 1
+        p_coeffs = p[:num_p]
+        h_coeffs = p[num_p:]
         
+        # Numerator P(x)
+        numerator = np.polyval(p_coeffs[::-1], x_val)
+        
+        # Denominator Q(x)
+        offset = 1 if b0_is_zero else 0
+        powers = np.arange(offset, len(h_coeffs) + offset)
+        denominator = 1.0 + np.sum(h_coeffs * (x_val ** powers))
+        
+        return numerator / denominator
+
+    uncertainties = []
+    for x_val in x_data:
+        # Compute Jacobian vector for parameters at current x_val
+        jacobian = approx_derivative(lambda p: rational_eval(x_val, p), params)
+        variance = jacobian.T @ cov_matrix @ jacobian
+        uncertainties.append(np.sqrt(max(0.0, variance)))
+
+    return np.array(uncertainties)
+
+       
 def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_folder, max_polynomial_degree):
     """
     Primary orchestrator for the Rational Function analysis framework.
@@ -619,6 +660,8 @@ def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_f
             file_base_for_saving = f"{dataset_label_with_pts}_n{n}"
             
             best_result_for_plotter = {**best_result_for_n, 
+                                       'cov_matrix': best_result_for_n.get('cov_matrix'),
+                                       'u_fit_vector': best_result_for_n.get('u_fit_vector'),
                                        'x_raw_data': x_current_norm, 
                                        'x_untransformed_data': x_current_untransformed,
                                        'y_data_data': y_data, 
@@ -669,9 +712,10 @@ def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_f
         best_per_n_df_aic = _save_best_m_per_n_summary(all_fits_this_run, base_output_path, dataset_label_with_pts, 'aic', '_aic_criterion')
         overall_best_nm_aic, overall_best_result_aic = min(all_fits_this_run.items(), key=lambda item: item[1]['aic'])
         
-        overall_best_result_full_aic = {**overall_best_result_aic,
-                                        'x_raw_data': x_current_norm, 
-                                        'x_untransformed_data': x_current_untransformed,
+        overall_best_result_full_aic = {
+                                        **overall_best_result_aic,
+                                        'cov_matrix': overall_best_result_aic.get('cov_matrix'),    
+                                        'u_fit_vector': overall_best_result_aic.get('u_fit_vector'),
                                         'y_data_data': y_data, 
                                         'std_y_data': std_y, 
                                         'std_x_data': std_x_untransformed,

@@ -22,6 +22,7 @@ import numpy as np
 import os
 import logging
 import fitting_analysis_scripts.function_defs as function_defs
+from scipy.optimize._numdiff import approx_derivative
 
 # --- METADATA TRANSLATION CONSTANTS ---
 TRANSFORMATION_MAP = {
@@ -53,30 +54,23 @@ def get_global_results_path(relative_path: str) -> str:
     directory structure at the project root. Automatically creates the 
     target directory tree if it does not exist.
     """
-    # 1. Locate the project root (up one level from 'fitting_analysis_scripts')
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
-    
-    # 2. Set the global results base
     global_results_base = os.path.join(project_root, 'results')
-    
-    # 3. Join the base with the provided relative path
     final_output_path = os.path.normpath(os.path.join(global_results_base, relative_path))
     
-    # 4. Physically create the directory tree if it doesn't exist
     if not os.path.exists(final_output_path):
         os.makedirs(final_output_path, exist_ok=True)
         logging.info(f"Initialized output directory: {final_output_path}")
     
     return final_output_path
 
+
 def save_its90_coeffs(coeffs: dict, output_path: str):
     """
     Exports calculated ITS-90 deviation coefficients to a dedicated CSV file.
     """
     filename = os.path.basename(output_path)
-    
-    # Redirect to global results folder under a subfolder 'ITS90'
     target_dir = get_global_results_path("ITS90_Calibration")
     final_save_path = os.path.join(target_dir, filename)
 
@@ -84,20 +78,115 @@ def save_its90_coeffs(coeffs: dict, output_path: str):
     df_coeffs.to_csv(final_save_path, sep=';', index=False, float_format='%.10e')
     logging.info(f"ITS-90 coefficients saved to: {final_save_path}")
 
+    
+def calculate_fit_uncertainty_vectorized(x_data, fitting_func, params, cov_matrix):
+    """
+    Calculates standard uncertainty of fit u(f(x)) at each point using the 
+    covariance matrix (GUM error propagation: u^2 = J^T * Cov * J).
+    """
+    if cov_matrix is None or np.isinf(cov_matrix).any():
+        return np.zeros_like(x_data)
+        
+    uncertainties = []
+    for x_val in x_data:
+        def model_wrapped(p):
+            return fitting_func(x_val, *p)
+        
+        jacobian = approx_derivative(model_wrapped, params)
+        variance = jacobian.T @ cov_matrix @ jacobian
+        uncertainties.append(np.sqrt(max(0.0, variance)))
+        
+    return np.array(uncertainties)
+
+
+def _compute_fit_uncertainty_and_polynomial(res: dict, config: dict = None, max_deg: int = 5):
+    """
+    Evaluates point-by-point expanded fit uncertainty U_fit (k=2, mK) at measurement nodes,
+    filters severe uncertainty outliers using IQR bounds, and fits a smoothed polynomial 
+    approximation U_fit(T) = u0 + u1*T + ... + u5*T^5 [mK].
+
+    Returns:
+        tuple: (u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK)
+               or (None, None, None, None) if computation is not feasible.
+    """
+    cov_matrix = res.get('cov_matrix')
+    params = res.get('params')
+    y_vals = res.get('y_data_data', res.get('y_raw', np.array([])))  # Temperature T [K]
+    x_norm = res.get('x_raw_data', np.array([]))
+
+    if cov_matrix is None or params is None or len(y_vals) == 0 or len(x_norm) == 0:
+        return None, None, None, None
+
+    if np.isinf(cov_matrix).any():
+        return None, None, None, None
+
+    try:
+        func_name = res.get('fitting_function_name') or (config.get('analysis_params', {}).get('fitting_function_name') if config else None) or ""
+        is_rational = 'n' in res or "Rational" in str(func_name)
+
+        if is_rational:
+            n_deg = int(res.get('n', 1))
+            m_deg = int(res.get('m', 1))
+            b0_zero = res.get('b0_is_zero', True)
+
+            def eval_model(xv, p):
+                num_p = n_deg + 1
+                p_coeffs, h_coeffs = p[:num_p], p[num_p:]
+                numerator = np.polyval(p_coeffs[::-1], xv)
+                offset = 1 if b0_zero else 0
+                powers = np.arange(offset, len(h_coeffs) + offset)
+                denominator = 1.0 + np.sum(h_coeffs * (xv ** powers))
+                return numerator / denominator
+        else:
+            func_info = function_defs.get_fitting_function(func_name)
+            fitting_func = func_info["function"] if func_info else None
+            if fitting_func is None:
+                return None, None, None, None
+
+            def eval_model(xv, p):
+                return fitting_func(xv, *p)
+
+        # 1. Compute exact expanded fit uncertainty U_fit (k=2, mK) at nodal points
+        u_nodes_list = []
+        for xv in x_norm:
+            J = approx_derivative(lambda p: eval_model(xv, p), params)
+            var = J.T @ cov_matrix @ J
+            u_nodes_list.append(np.sqrt(max(0.0, var)) * 2000.0)
+
+        u_nodes_mK = np.array(u_nodes_list)
+        U_avg_k2_mK = float(np.mean(u_nodes_mK))
+        U_max_k2_mK = float(np.max(u_nodes_mK))
+
+        # 2. Filter severe uncertainty outliers using Interquartile Range (IQR) criterion
+        q25, q75 = np.percentile(u_nodes_mK, [25, 75])
+        iqr = q75 - q25
+        upper_bound = q75 + 1.5 * iqr
+        mask = u_nodes_mK <= upper_bound
+
+        # Fallback to full set if too many nodes are masked
+        y_filt = y_vals[mask] if np.sum(mask) >= 4 else y_vals
+        u_filt = u_nodes_mK[mask] if np.sum(mask) >= 4 else u_nodes_mK
+
+        # 3. Fit smoothed polynomial model to filtered uncertainty profile U_fit(T)
+        poly_deg = min(max_deg, len(y_filt) - 1)
+        if poly_deg < 0:
+            u_poly_coeffs = np.zeros(max_deg + 1)
+        else:
+            # Polyfit coefficients ordered from u0 (lowest degree) to u5 (highest degree)
+            fit_coeffs = np.polyfit(y_filt, u_filt, deg=poly_deg)[::-1]
+            u_poly_coeffs = np.zeros(max_deg + 1)
+            u_poly_coeffs[:len(fit_coeffs)] = fit_coeffs
+
+        return u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK
+
+    except Exception as e:
+        logging.warning(f"Could not compute uncertainty polynomial model: {e}")
+        return None, None, None, None
+
+
 def save_statistics(all_results: dict, data_label: str, num_points: int, file_base_name: str, output_dir: str):
     """
     Saves fitting statistics for all tested degrees to a single CSV file.
-
-    The saved file includes standard goodness-of-fit metrics (R-squared, Chi-squared)
-    and information criteria (AIC, BIC), as well as advanced diagnostic test
-    results (Durbin-Watson, Breusch-Pagan).
-
-    Args:
-        all_results (dict): Dictionary where keys are degrees and values are result dicts.
-        data_label (str): A descriptive label for the dataset (used internally).
-        num_points (int): The number of data points in the analyzed set.
-        file_base_name (str): The base name for the output file.
-        output_dir (str): The directory where the file will be saved.
     """
     stats_data = []
     for complexity_level, result in all_results.items():
@@ -123,32 +212,25 @@ def save_statistics(all_results: dict, data_label: str, num_points: int, file_ba
     if not df_stats.empty:
         df_stats.sort_values(by='complexity_level', inplace=True)
         if 'm' in next(iter(all_results.values())):
-             df_stats.rename(columns={'complexity_level': 'm'}, inplace=True)
+            df_stats.rename(columns={'complexity_level': 'm'}, inplace=True)
 
     output_filename = f"{file_base_name}_statistics.csv"
     target_dir = get_global_results_path(output_dir)
     output_path = os.path.join(target_dir, output_filename)
     df_stats.to_csv(output_path, sep=';', index=False)
     logging.info(f"Statistics saved to: {output_path}")
+    
+    save_jacobian_covariance_report(
+        results_dict=all_results, 
+        file_base_name=f"{file_base_name}_{num_points}pts", 
+        output_dir=output_dir
+    )
 
 
 def save_parameters(all_results: dict, data_label: str, num_points: int, file_base_name: str, output_dir: str,
                     fitting_function_name: str, max_degree: int, B1_val: float, B2_val: float):
     """
-    Exports fitted mathematical coefficients and their associated standard errors 
-    across all evaluated complexities. Handles column padding for polynomials 
-    and custom ordering for non-linear models like Sine waves.
-
-    Args:
-        all_results (dict): Dictionary containing results for all fitted degrees.
-        data_label (str): A descriptive label for the dataset.
-        num_points (int): The number of data points in the analyzed set.
-        file_base_name (str): The base name for the output file.
-        output_dir (str): The directory where the file will be saved.
-        fitting_function_name (str): The name of the function used for fitting.
-        max_degree (int): The maximum degree tested, used for column padding.
-        B1_val (float): The min X value from the original dataset (for scaling).
-        B2_val (float): The max X value from the original dataset (for scaling).
+    Exports fitted mathematical coefficients and their associated standard errors.
     """
     if not all_results:
         return
@@ -174,7 +256,6 @@ def save_parameters(all_results: dict, data_label: str, num_points: int, file_ba
 
     df_params = pd.DataFrame.from_records(records)
     
-    # --- Intelligent Column Ordering ---
     ordered_cols = ['degree']
     if scaling_used and 'B1' in df_params.columns: ordered_cols.extend(['B1', 'B2'])
     
@@ -199,22 +280,32 @@ def save_parameters(all_results: dict, data_label: str, num_points: int, file_ba
 
 def save_best_fit_results(best_result: dict, data_label: str, num_points: int, file_base_name: str, output_dir: str, **kwargs):
     """
-    Exports the fundamental curve data (measured points, fitted prediction line, 
-    and standard/studentized residuals) for the single best-performing model.
-
-    Args:
-        best_result (dict): The dictionary of results for the best-fit model.
-        data_label (str): A descriptive label for the dataset.
-        num_points (int): The number of data points in the set.
-        file_base_name (str): The base name for the output file.
-        output_dir (str): The directory where the file will be saved.
-        **kwargs: Catches unused arguments like B1_val and B2_val.
+    Exports the fundamental curve data for the single best-performing model.
     """
+    func_name = best_result.get('fitting_function_name')
+    func_info = function_defs.get_fitting_function(func_name)
+    fitting_func = func_info["function"] if func_info else None
+
+    if 'u_fit_vector' in best_result and best_result['u_fit_vector'] is not None:
+        u_fit_vector = best_result['u_fit_vector']
+    elif fitting_func and 'cov_matrix' in best_result and best_result['cov_matrix'] is not None:
+        u_fit_vector = calculate_fit_uncertainty_vectorized(
+            best_result['x_raw_data'], 
+            fitting_func, 
+            best_result['params'], 
+            best_result['cov_matrix']
+        )
+    else:
+        u_fit_vector = np.zeros_like(best_result['x_raw_data'])
+    
+    best_result['u_fit_vector'] = u_fit_vector
+
     data_dict = {
         'x_transformed': best_result['x_raw_data'],
         'y_raw': best_result['y_data_data'],
         'y_fit': best_result['y_fit'],
-        'residuals': best_result['residuals']
+        'U_fit_expanded_k2_mK': u_fit_vector * 2000.0,
+        'residuals_mK': best_result['residuals'] * 1000.0
     }
     
     if 'x_untransformed_data' in best_result:
@@ -225,142 +316,85 @@ def save_best_fit_results(best_result: dict, data_label: str, num_points: int, f
 
     df_best_fit = pd.DataFrame(data_dict)
     
-    cols_order = ['R_untransformed', 'x_transformed', 'y_raw', 'y_fit', 'residuals', 'studentized_residuals']
+    cols_order = [
+        'R_untransformed', 'x_transformed', 'y_raw', 'y_fit', 
+        'U_fit_expanded_k2_mK', 'residuals_mK', 'studentized_residuals'
+    ]
+    
     final_cols = [col for col in cols_order if col in df_best_fit.columns]
     df_best_fit = df_best_fit[final_cols]
     
     output_filename = f"{file_base_name}_best_fit.csv"
     target_dir = get_global_results_path(output_dir)
     output_path = os.path.join(target_dir, output_filename)
-    df_best_fit.to_csv(output_path, sep=';', index=False)
-    logging.info(f"Best fit data saved to: {output_path}")
     
-       
-def save_outlier_variability_data(all_variability_results: dict, data_label_prefix: str,
-                                  file_base_name: str, output_dir: str,
-                                  B1_val: float, B2_val: float,
-                                  fixed_polynomial_degree: int, sorted_num_removed_keys: list):
-    """
-    Saves combined statistics and parameters for the outlier variability test.
-
-    This function creates two transposed summary files for easy comparison:
-    1. Statistics File: Rows are statistic names (e.g., AIC), columns are for
-       each step of outlier removal.
-    2. Parameters File: Rows are parameter names (e.g., A0), columns are
-       value/error pairs for each removal step.
-
-    Args:
-        all_variability_results (dict): Dict where keys are `num_removed` and values are results.
-        data_label_prefix (str): Prefix for file names (e.g., "Outlier_Variability_Test").
-        file_base_name (str): The base name of the original input file.
-        output_dir (str): Directory where the files should be saved.
-        B1_val (float): The min X value from the original dataset (for scaling).
-        B2_val (float): The max X value from the original dataset (for scaling).
-        fixed_polynomial_degree (int): The polynomial degree used for the test.
-        sorted_num_removed_keys (list): Sorted list of `num_removed` keys for correct ordering.
-    """
-    if not all_variability_results:
-        logging.warning("No results to save for outlier variability test.")
-        return
+    df_best_fit.to_csv(output_path, sep=';', index=False, float_format='%.8e')
+    logging.info(f"Best fit dataset successfully exported to: {output_path}")    
     
+
+def save_jacobian_covariance_report(results_dict: dict, file_base_name: str, output_dir: str):
+    """
+    Exports a dedicated metrological report containing full Covariance Matrices 
+    and a 5th-degree polynomial approximation of the expanded fit uncertainty profile U_fit(T) [k=2, mK].
+    """
     target_dir = get_global_results_path(output_dir)
+    output_path = os.path.join(target_dir, f"{file_base_name}_jacobian_covariance.csv")
 
-   # --- 1. Prepare Transposed Statistics Matrix ---
-    stats_df_data = {
-        'Statistic': [
-            'R_Squared', 'Chi_Squared', 'Reduced_Chi_Squared', 'AIC', 'BIC',
-            'Sum_of_Absolute_Residuals', 'Num_Points_Remaining'
-        ]
-    }
-    for num_removed_count in sorted_num_removed_keys:
-        res = all_variability_results[num_removed_count]
-        
-        removed_index_info = "N/A"
-        if res.get('removed_outlier_indices') and len(res['removed_outlier_indices']) >= num_removed_count:
-            original_index_of_last_removed = res['removed_outlier_indices'][num_removed_count - 1]
-            removed_index_info = f"{original_index_of_last_removed}"
-        
-        col_name = f'Removed_Point_Index_{removed_index_info}'
-        stats_df_data[col_name] = [
-            res.get('r_squared'), res.get('chi_squared'), res.get('reduced_chi_squared'),
-            res.get('aic'), res.get('bic'), res.get('sum_of_absolute_residuals'),
-            len(res.get('y_data_data', []))
-        ]
-    
-    df_stats_combined = pd.DataFrame(stats_df_data)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(";===================================================\n")
+        f.write("; METROLOGICAL REPORT: JACOBIAN & COVARIANCE ENGINE\n")
+        f.write("; Formulation: u_fit(x) = sqrt( J(x)^T * Cov * J(x) )\n")
+        f.write(";===================================================\n\n")
 
-    first_data_column_name = next((col for col in df_stats_combined.columns if col != 'Statistic'), 'Value_Column')
-    df_stats_combined = pd.concat([
-        df_stats_combined,
-        pd.DataFrame([{'Statistic': 'B1 Value', first_data_column_name: B1_val}]),
-        pd.DataFrame([{'Statistic': 'B2 Value', first_data_column_name: B2_val}])
-    ], ignore_index=True)
+        for key, result in sorted(results_dict.items()):
+            func_name = result.get('fitting_function_name', 'Unknown Model')
+            cov = result.get('cov_matrix')
+            params = result.get('params', [])
+            param_names = result.get('param_names', [f"P{i}" for i in range(len(params))])
 
-    stats_file_name = f"{file_base_name}_{data_label_prefix.replace(' ', '_').lower()}_combined_statistics.csv"
-    output_stats_path = os.path.join(target_dir, stats_file_name)
-    df_stats_combined.to_csv(output_stats_path, sep=';', index=False, float_format='%.8e')
-    logging.info(f"Saved combined outlier variability statistics to: {output_stats_path}")
-    
-    # --- 2. Prepare Transposed Parameters Matrix ---
-    num_params = fixed_polynomial_degree + 1 
-    param_names = [f'A{i}' for i in range(num_params)]
-
-    params_combined_list = []
-    for param_idx in range(num_params):
-        param_row = {'Parameter_Name': param_names[param_idx]}
-        for num_removed_count in sorted_num_removed_keys:
-            res = all_variability_results[num_removed_count]
+            f.write(f";--- MODEL ENTRY: {key} ({func_name}) ---\n")
+            f.write(f";Number of Parameters: {len(params)}\n")
             
-            removed_index_info = "N/A"
-            if res.get('removed_outlier_indices') and len(res['removed_outlier_indices']) >= num_removed_count:
-                original_index_of_last_removed = res['removed_outlier_indices'][num_removed_count - 1]
-                removed_index_info = f"{original_index_of_last_removed}"
-            
-            col_val_name = f'Value_Removed_Index_{removed_index_info}'
-            col_err_name = f'Error_Removed_Index_{removed_index_info}'
-
-            if param_idx < len(res['params']):
-                param_row[col_val_name] = res['params'][param_idx]
-                param_row[col_err_name] = res['param_errors'][param_idx]
+            if cov is not None and not np.isinf(cov).any():
+                f.write(";Parameter Labels:;" + ";".join(param_names) + "\n")
+                f.write(";Parameter Values:;" + ";".join([f"{p:+18.12e}" for p in params]) + "\n")
+                f.write(";Covariance Matrix:\n")
+                
+                f.write(";" + ";".join(param_names) + "\n")
+                for row in cov:
+                    f.write(";" + ";".join([f"{val:+.8e}" for val in row]) + "\n")
             else:
-                param_row[col_val_name] = np.nan
-                param_row[col_err_name] = np.nan
-        params_combined_list.append(param_row)
+                f.write(";Covariance Matrix: N/A (Singular or ill-conditioned fit)\n")
 
-    df_params_combined = pd.DataFrame(params_combined_list)
-    
-    df_params_combined = pd.concat([
-        df_params_combined,
-        pd.DataFrame([{'Parameter_Name': 'B1 Value', first_data_column_name: B1_val}]),
-        pd.DataFrame([{'Parameter_Name': 'B2 Value', first_data_column_name: B2_val}])
-    ], ignore_index=True)
+            _, u_poly_coeffs, _, _ = _compute_fit_uncertainty_and_polynomial(result, max_deg=5)
 
-    params_file_name = f"{file_base_name}_{data_label_prefix.replace(' ', '_').lower()}_combined_parameters.csv"
-    output_params_path = os.path.join(target_dir, params_file_name) 
-    df_params_combined.to_csv(output_params_path, sep=';', index=False, float_format='%.8e')
-    logging.info(f"Saved combined outlier variability parameters to: {output_params_path}")
+            if u_poly_coeffs is not None:
+                f.write("\n;--- FIT UNCERTAINTY POLYNOMIAL MODEL U_fit(T) [mK] ---\n")
+                f.write(";Formulation;U_fit(T) = u_0 + u_1*T + u_2*T^2 + u_3*T^3 + u_4*T^4 + u_5*T^5 [mK] (k=2)\n")
+                f.write(";Coefficients_Order;u_0;u_1;u_2;u_3;u_4;u_5\n")
+                
+                coeffs_formatted = [f"{u_poly_coeffs[i]:+18.12e}" for i in range(6)]
+                f.write(";Values;" + ";".join(coeffs_formatted) + "\n")
+            else:
+                f.write("\n;Fit Uncertainty Polynomial: Calculation unavailable\n")
+
+            f.write("\n")
+
+    logging.info(f"Jacobian & Covariance report with uncertainty polynomial saved to: {output_path}")
+
 
 def _get_report_metadata(current_data, config, res=None):
     """
-    Extracts operational metadata (Model Type, Transformation, R_Reference) 
-    by recursively scanning configuration dictionaries. 
-    Crucial for generating standardized report headers.
-    
-    Args:
-        current_data (dict): The active dataset dictionary containing current session metadata.
-        config (dict): The global configuration dictionary containing analysis parameters.
-        res (dict, optional): The result dictionary from a specific model fit. Defaults to None.
+    Extracts operational metadata (Model Type, Transformation, R_Reference).
     """
     current_data = current_data or {}
     config = config or {}
     res = res or {}
     
-    # 1. Resolve Mathematical Model Name
     fit_name = config.get('analysis_params', {}).get('fitting_function_name')
     if not fit_name or str(fit_name) == "None":
         fit_name = res.get('fitting_function_name', "Model Result")
     
-    # 2. Resolve X-Axis Transformation Protocol
     meta = current_data.get('x_transformation_metadata', config.get('x_transformation_metadata', {}))
     t_type = meta.get('type', 'raw_R')
     label = str(current_data.get('label', ''))
@@ -370,7 +404,6 @@ def _get_report_metadata(current_data, config, res=None):
             break
     trans_label = TRANSFORMATION_MAP.get(t_type, t_type)
 
-    # 3. Resolve Reference Resistance (R_ref)
     r_ref = meta.get('r_ref') or \
             config.get('analysis_params', {}).get('norm_params', {}).get('r_ref') or \
             config.get('analysis_params', {}).get('r_ref') or \
@@ -378,74 +411,127 @@ def _get_report_metadata(current_data, config, res=None):
             
     return fit_name, trans_label, r_ref
 
+
 def _write_fit_core_logic(f, res, config, section_label, is_piecewise):
     """
-    Core writing engine that structures the model boundaries, diagnostics, 
-    and calculated parameters into an appendable CSV format.
-    Dynamically adapts format for standard polynomials vs Rational functions.
-    
-    Args:
-        f (file object): The open file handle where the CSV text will be written.
-        res (dict): The result dictionary containing the fitted parameters and diagnostics.
-        config (dict): The global configuration dictionary.
-        section_label (str): The prefix applied to rows (e.g., 'GLOBAL', 'SEGMENT_1').
-        is_piecewise (bool): Flag indicating if the 5-column piecewise format should be used.
+    Core writing engine structuring boundaries, diagnostics, expanded fit uncertainties (k=2, mK),
+    model parameters, full Jacobian Covariance Matrix, and a 5th-degree polynomial approximation of U_fit(T).
     """
     prefix = f"{section_label}," if is_piecewise else ""
 
     # --- 1. Sub-Range Limits ---
-    y_vals = res.get('y_data_data', res.get('y_raw', np.array([0])))
+    y_vals = res.get('y_data_data', res.get('y_raw', np.array([0])))  # Physical Temperature T [K]
     r_vals = res.get('x_untransformed_data', res.get('R_untransformed', []))
     
     f.write(f"{prefix}--- LIMITS ---,-,-,-\n")
-    f.write(f"{prefix}T_LIMIT_LOW,{y_vals.min():.4f},K,Min temperature\n")
-    f.write(f"{prefix}T_LIMIT_HIGH,{y_vals.max():.4f},K,Max temperature\n")
+    f.write(f"{prefix}T_LIMIT_LOW,{np.min(y_vals):.4f},K,Min temperature\n")
+    f.write(f"{prefix}T_LIMIT_HIGH,{np.max(y_vals):.4f},K,Max temperature\n")
     if len(r_vals) > 0:
         f.write(f"{prefix}R_MIN,{np.min(r_vals):.12e},Ohm,Min resistance\n")
         f.write(f"{prefix}R_MAX,{np.max(r_vals):.12e},Ohm,Max resistance\n")
 
-    # --- 2. Statistical Diagnostics ---
+    # --- 2. Diagnostics ---
+    f.write("\n")
     f.write(f"{prefix}--- DIAGNOSTICS ---,-,-,-\n")
     is_rational = 'n' in res or "Rational" in str(config.get('analysis_params', {}).get('fitting_function_name', ''))
     
     if is_rational:
-        f.write(f"{prefix}MODEL_STRUCTURE,n={res.get('n')} m={res.get('m')},-,Rational order\n")
-        choice = config.get('analysis_params', {}).get('norm_params', {}).get('choice')
-        if choice in RATIONAL_NORM_MAP:
-            f.write(f"{prefix}TRANS_METHOD,{RATIONAL_NORM_MAP[choice]},-,Scaling formula\n")
+        f.write(f"{prefix}MODEL_STRUCTURE,n={res.get('n')} m={res.get('m')},-,Rational order P(x)/Q(x)\n")
     else:
-        deg = len(res.get('params', [])) - 1
+        num_params_poly = len(res.get('params')) if res.get('params') is not None else 1
+        deg = num_params_poly - 1
         f.write(f"{prefix}POLYNOMIAL_DEGREE,{max(0, deg)},-,Polynomial degree\n")
 
     for k in ['reduced_chi_squared', 'aic', 'bic']:
         val = res.get(k, res.get('reduced_chi_sq' if k == 'reduced_chi_squared' else k, 'N/A'))
         f.write(f"{prefix}{k.upper()},{f'{val:.4f}' if isinstance(val, (float, int)) else 'N/A'},-,-\n")
 
-    # --- 3. Parameter Coefficients ---
+    # --- 3. Model Fit Uncertainty Metrics (GUM, k=2) ---
+    cov_matrix = res.get('cov_matrix')
+    params = res.get('params')
+
+    u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK = _compute_fit_uncertainty_and_polynomial(res, config, max_deg=5)
+
+    if U_avg_k2_mK is not None:
+        f.write(f"{prefix}FIT_UNCERTAINTY_EXP_AVG_K2_MK,{U_avg_k2_mK:.4f},mK,Mean expanded fit uncertainty U(T) (k=2)\n")
+        f.write(f"{prefix}FIT_UNCERTAINTY_EXP_MAX_K2_MK,{U_max_k2_mK:.4f},mK,Max expanded fit uncertainty U(T) (k=2)\n")
+
+    # --- 4. Model Coefficients (Excel Side-by-Side Layout) ---
+    f.write("\n")
     f.write(f"{prefix}--- MODEL ---,-,-,-\n")
-    params = res.get('params', [])
-    errors = res.get('param_errors', [0]*len(params))
     
-    if is_rational:
-        n, m = int(res.get('n', 0)), int(res.get('m', 0))
+    param_errs = res.get('param_errors')
+    num_params = len(params) if params is not None else 0
+    errors = param_errs if param_errs is not None else [0.0] * num_params
+    param_names = []
+    
+    if is_rational and params is not None:
+        n = int(res.get('n', 0)) if res.get('n') is not None else 0
+        m = int(res.get('m', 0)) if res.get('m') is not None else 0
         b0_zero = res.get('b0_is_zero', True)
+
+        f.write(f"{prefix}Nominator,{n},Denominator,{m}\n")
+        f.write(f"{prefix},value,,value\n")
+
+        num_count = n + 1
+        N_coeffs = params[:num_count]
+        M_coeffs = params[num_count:]
         
-        # Write Numerator components (N)
-        for j in range(n + 1):
-            if j < len(params):
-                f.write(f"{prefix}N_{j},{params[j]:+18.12e},{errors[j]:.6e},Numerator\n")
-                
-        # Write Denominator components (M)
-        offset = n + 1
-        m_range = range(1, m + 1) if b0_zero else range(m + 1)
-        for j in m_range:
-            idx = offset + (j - 1 if b0_zero else j)
-            if idx < len(params):
-                f.write(f"{prefix}M_{j},{params[idx]:+18.12e},{errors[idx]:.6e},Denominator\n")
-    else:
-        # Standard polynomial coefficients (A)
+        m_start_idx = 1 if b0_zero else 0
+        max_rows = max(len(N_coeffs), len(M_coeffs))
+
+        for r in range(max_rows):
+            if r < len(N_coeffs):
+                n_idx_str = f"{r}"
+                n_val_str = f"{N_coeffs[r]:+18.12e}"
+                param_names.append(f"N_{r}")
+            else:
+                n_idx_str = ""
+                n_val_str = ""
+
+            if r < len(M_coeffs):
+                m_idx_val = r + m_start_idx
+                m_idx_str = f"{m_idx_val}"
+                m_val_str = f"{M_coeffs[r]:+18.12e}"
+                param_names.append(f"M_{m_idx_val}")
+            else:
+                m_idx_str = ""
+                m_val_str = ""
+
+            f.write(f"{prefix}{n_idx_str},{n_val_str},{m_idx_str},{m_val_str}\n")
+
+    elif params is not None:
+        deg = len(params) - 1
+        f.write(f"{prefix}POLYNOMIAL_DEGREE,{max(0, deg)},-,Polynomial degree\n")
         for j, p in enumerate(params):
-            f.write(f"{prefix}A{j},{p:+18.12e},{errors[j]:.6e},Coefficient\n")
+            lbl = f"A{j}"
+            param_names.append(lbl)
+            err_val = errors[j] if j < len(errors) else 0.0
+            f.write(f"{prefix}{lbl},{p:+18.12e},{err_val:.6e},Coefficient\n")
+
+    # --- 5. Jacobian Covariance Matrix ---
+    f.write("\n")
+    f.write(f"{prefix}--- JACOBIAN COVARIANCE MATRIX ---,-,-,-\n")
+    if cov_matrix is not None and not np.isinf(cov_matrix).any():
+        f.write(f"{prefix}JACOBIAN_ENGINE,scipy.optimize._numdiff.approx_derivative,-,Numerical Jacobian\n")
+        f.write(f"{prefix}UNCERTAINTY_FORMULA,u_fit(x) = sqrt( J(x)^T * Cov * J(x) ),-,GUM propagation\n")
+        headers_str = ";".join(param_names) if param_names else ";".join([f"P{i}" for i in range(len(cov_matrix))])
+        f.write(f"{prefix}COV_LABELS,{headers_str},-,Covariance matrix columns\n")
+        for i, row in enumerate(cov_matrix):
+            row_str = ";".join([f"{val:+.8e}" for val in row])
+            lbl = param_names[i] if i < len(param_names) else f"ROW_{i}"
+            f.write(f"{prefix}COV_ROW_{lbl},{row_str},-,Covariance matrix row\n")
+
+    # --- 6. 5th-Degree Polynomial Approximation of Expanded Uncertainty U_fit(T) [mK] ---
+    if u_poly_coeffs is not None:
+        f.write("\n")
+        f.write(f"{prefix}--- FIT UNCERTAINTY POLYNOMIAL MODEL U_fit(T) [mK] ---,-,-,-\n")
+        f.write(f"{prefix}U_FIT_FORMULA,U_fit(T) = u_0 + u_1*T + u_2*T^2 + u_3*T^3 + u_4*T^4 + u_5*T^5 [mK],-,Expanded uncertainty approximation (k=2)\n")
+        f.write(f"{prefix}U_FIT_COEFFS_ORDER,u_0;u_1;u_2;u_3;u_4;u_5,-,Order of polynomial coefficients\n")
+        
+        coeffs_str = ";".join([f"{u_poly_coeffs[idx]:+18.12e}" for idx in range(6)])
+        f.write(f"{prefix}U_FIT_VALUES,{coeffs_str},mK,Polynomial coefficients u_0 to u_5\n")
+
 
 # =============================================================================
 # --- PUBLIC API: COMPREHENSIVE REPORT GENERATION ---
@@ -453,15 +539,7 @@ def _write_fit_core_logic(f, res, config, section_label, is_piecewise):
 
 def save_global_report(res, current_data, config, output_dir=None):
     """
-    Generates a 4-column comprehensive CSV report containing metadata, limits, 
-    diagnostics, and calculated coefficients for a Global (non-segmented) model.
-    
-    Args:
-        res (dict): The result dictionary for the best-fit model.
-        current_data (dict): The dictionary containing the raw dataset and session info.
-        config (dict): The global configuration dictionary.
-        output_dir (str, optional): An override path for saving the report. 
-                                    Defaults to config['main_output_folder'].
+    Generates a 4-column comprehensive CSV report for a Global (non-segmented) model.
     """
     if not res: return
     
@@ -484,23 +562,17 @@ def save_global_report(res, current_data, config, output_dir=None):
             if r_ref is not None:
                 f.write(f"R_Reference_Value,{float(r_ref):.8f},Ohm,Reference Resistance\n")
             
-            f.write(",,,\n")
+            f.write("\n")
             _write_fit_core_logic(f, res, config, "GLOBAL", is_piecewise=False)
             
         logging.info(f"Report created with R_ref={r_ref}")
     except Exception as e:
         logging.error(f"Failed to save global report: {e}")
 
+
 def save_piecewise_results(piecewise_results: list, current_data: dict, config: dict):
     """
     Generates a 5-column comprehensive CSV report for Segmented (Piecewise) models.
-    Appends a 'SECTION' prefix to each row to differentiate between adjacent 
-    topological segments.
-    
-    Args:
-        piecewise_results (list): A list of result dictionaries, one for each segment.
-        current_data (dict): The dictionary containing the raw dataset and session info.
-        config (dict): The global configuration dictionary.
     """
     if not piecewise_results: return
     target_dir = get_global_results_path(config.get('main_output_folder', 'results'))
@@ -518,7 +590,7 @@ def save_piecewise_results(piecewise_results: list, current_data: dict, config: 
                 f.write(f"METADATA,R_Reference_Value,{float(r_ref):.8f},Ohm,Reference\n")
             
             for i, res in enumerate(piecewise_results):
-                f.write(",\n")
+                f.write("\n")
                 _write_fit_core_logic(f, res, config, f"SEGMENT_{i+1}", is_piecewise=True)
         logging.info(f"Piecewise report saved: {file_path}")
     except Exception as e:

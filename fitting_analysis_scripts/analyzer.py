@@ -211,14 +211,24 @@ def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, s
             # Aggregate iteration results
             result_dict = {
                 'degree': degree_label,
-                'params': params, 'param_errors': perr, 'y_fit': y_fit_set, 'residuals': residuals_set,
-                'r_squared': r_squared, 'chi_squared': chi_squared, 'reduced_chi_squared': reduced_chi_squared,
-                'aic': aic, 'bic': bic, 'degrees_of_freedom': degrees_of_freedom, 'num_parameters': k,
+                'params': params, 'param_errors': perr, 
+                'cov_matrix': cov_matrix, 
+                'y_fit': y_fit_set, 
+                'residuals': residuals_set,
+                'r_squared': r_squared, 
+                'chi_squared': chi_squared, 
+                'reduced_chi_squared': reduced_chi_squared,
+                'aic': aic, 
+                'bic': bic, 
+                'degrees_of_freedom': degrees_of_freedom, 
+                'num_parameters': k,
                 'sum_of_absolute_residuals': np.sum(np.abs(residuals_set)),
                 'max_abs_residual_mk': max_abs_residual_mk,
                 'x_raw_data': x_data_for_fit, 
                 'x_untransformed_data': x_untransformed_set,
-                'y_data_data': y_data_set, 'std_y_data': std_y_set, 'std_x_data': std_x_set,
+                'y_data_data': y_data_set, 
+                'std_y_data': std_y_set, 
+                'std_x_data': std_x_set,
                 'removed_outlier_indices': removed_outlier_indices_current_step,
                 'fitting_function_name': fitting_function_name
             }

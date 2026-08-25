@@ -248,12 +248,17 @@ def visualize_and_test_residuals(residuals: np.ndarray, x_raw: np.ndarray, y_raw
             'y_fit': y_raw - residuals,
             'residuals_mK': residuals*1000,
         }
+        
+        if 'u_fit_vector' in best_fit_info:
+            diagnostic_data['u_fit_standard_K'] = best_fit_info['u_fit_vector']
+            diagnostic_data['U_fit_expanded_k2_mK'] = best_fit_info['u_fit_vector'] * 2000
+
         if studentized_residuals is not None:
             diagnostic_data['studentized_residuals'] = studentized_residuals
             
         df_diag = pd.DataFrame(diagnostic_data)
         
-        cols = ['x_raw', 'y_raw', 'y_fit', 'residuals_mK', 'studentized_residuals']
+        cols = ['x_raw', 'y_raw', 'y_fit', 'u_fit_standard_K', 'U_fit_expanded_k2_mK', 'residuals_mK', 'studentized_residuals']
         final_cols = [c for c in cols if c in df_diag.columns]
         df_diag = df_diag[final_cols]
 
@@ -263,5 +268,4 @@ def visualize_and_test_residuals(residuals: np.ndarray, x_raw: np.ndarray, y_raw
 
     except Exception as e:
         logging.error(f"Could not save diagnostic data to CSV: {e}")
-        
         

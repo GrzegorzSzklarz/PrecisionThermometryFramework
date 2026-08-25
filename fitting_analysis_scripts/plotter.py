@@ -21,7 +21,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 from pathlib import Path
-from fitting_analysis_scripts.data_saver import get_global_results_path
+from fitting_analysis_scripts.data_saver import get_global_results_path, _compute_fit_uncertainty_and_polynomial
+from scipy.optimize._numdiff import approx_derivative
+import fitting_analysis_scripts.function_defs as function_defs
+
 
 def generate_diagnostic_plots(best_result: dict, output_dir: str, file_base_name: str, num_points: int, interactive: bool = False):
     """
@@ -48,27 +51,61 @@ def generate_diagnostic_plots(best_result: dict, output_dir: str, file_base_name
     # X-axis for plotting physical temperature domain
     x_plot = best_result.get('y_data_data', np.arange(num_points))
     
-    # --- 1. Standard Residuals Plot ---
-    # Purpose: Check for heteroscedasticity and residual magnitude/trends.
+    # --- 1. Standard Residuals Plot with Fitted Uncertainty Bands (k=1 and k=2) ---
     try:
         fig_res, ax_res = plt.subplots(figsize=(10, 6))
         
-        residuals_mK = best_result['residuals'] * 1000
+        residuals_mK = best_result['residuals'] * 1000.0
+        x_norm = best_result.get('x_raw_data', [])
         
-        # Robust error bar plotting: checking if uncertainties were actually provided
+        # 1. Measurement Residuals Plotting
         if 'std_y_data' in best_result and 'std_x_data' in best_result:
-            y_err_mK = best_result['std_y_data'] * 1000
+            y_err_mK = best_result['std_y_data'] * 1000.0
             ax_res.errorbar(x_plot, residuals_mK, 
                             yerr=y_err_mK, xerr=best_result['std_x_data'], 
-                            fmt='o', capsize=3, markersize=4, color='purple', label='Residuals', alpha=0.7)
+                            fmt='o', capsize=3, markersize=4, color='purple', 
+                            label='Measurement Residuals', alpha=0.8, zorder=3)
         else:
-            # Fallback for data without specified uncertainties
-            ax_res.scatter(x_plot, residuals_mK, color='purple', label='Residuals', alpha=0.7)
+            ax_res.scatter(x_plot, residuals_mK, color='purple', label='Measurement Residuals', alpha=0.8, zorder=3)
             
-        ax_res.axhline(y=0, color='r', linestyle='--', label='Zero Deviation')
-        ax_res.set_title(r'$\mathbf{Standard\ Residuals\ Analysis\, mK}$')
+        # Baseline reference
+        ax_res.axhline(y=0, color='r', linestyle='--', label='Zero Deviation Baseline', zorder=2)
+
+    # 2. Fit Uncertainty Bands (Identical to CSV report model with IQR filtering)
+        u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK = _compute_fit_uncertainty_and_polynomial(best_result, max_deg=5)
+
+        if u_poly_coeffs is not None:
+            # Evaluate smooth profile on dense mesh (u_poly_coeffs: u0..u5, so reverse for polyval)
+            x_dense_T = np.linspace(np.min(x_plot), np.max(x_plot), 500)
+            
+            # Expanded uncertainty U_fit(T) [mK] (k=2)
+            U_fit_smooth_mK = np.maximum(0.0, np.polyval(u_poly_coeffs[::-1], x_dense_T))
+            # Standard uncertainty u_fit(T) [mK] (k=1)
+            u_fit_smooth_mK = U_fit_smooth_mK / 2.0
+
+            # Outer Shaded Band: Expanded Fit Uncertainty (k = 2)
+            ax_res.fill_between(
+                x_dense_T, -U_fit_smooth_mK, U_fit_smooth_mK, 
+                color='red', alpha=0.12, 
+                label=rf'Expanded Uncertainty Band $U_{{\mathrm{{fit}}}}$ ($k=2$, mK)', zorder=1
+            )
+
+            # Inner Shaded Band: Standard Fit Uncertainty (k = 1)
+            ax_res.fill_between(
+                x_dense_T, -u_fit_smooth_mK, u_fit_smooth_mK, 
+                color='red', alpha=0.25, 
+                label=rf'Standard Uncertainty Band $u_{{\mathrm{{fit}}}}$ ($k=1$, mK)', zorder=1
+            )
+            
+            # Continuous Envelope Lines
+            ax_res.plot(x_dense_T, U_fit_smooth_mK, color='red', linestyle='-', linewidth=0.8, alpha=0.7, zorder=2)
+            ax_res.plot(x_dense_T, -U_fit_smooth_mK, color='red', linestyle='-', linewidth=0.8, alpha=0.7, zorder=2)
+            ax_res.plot(x_dense_T, u_fit_smooth_mK, color='red', linestyle='--', linewidth=0.6, alpha=0.8, zorder=2)
+            ax_res.plot(x_dense_T, -u_fit_smooth_mK, color='red', linestyle='--', linewidth=0.6, alpha=0.8, zorder=2)
+            
+        ax_res.set_title(r'$\mathbf{Standard\ Residuals\ Analysis\ with\ Fit\ Uncertainty\ Bands\ [mK]}$')
         ax_res.set_xlabel('Temperature, K')
-        ax_res.set_ylabel('Residuals, mK')
+        ax_res.set_ylabel('Residuals / Uncertainty, mK')
         ax_res.legend(loc='best')
         ax_res.grid(True, alpha=0.3)
         
@@ -78,10 +115,10 @@ def generate_diagnostic_plots(best_result: dict, output_dir: str, file_base_name
         path_res = os.path.join(target_dir, f"{file_base_name}_{num_points}pts_standard_residuals.png")
         fig_res.savefig(path_res, dpi=300, bbox_inches='tight')
         plt.close(fig_res)
-        logging.info(f"Standard residuals plot saved: {path_res}")
+        logging.info(f"Fitted standard residuals plot saved to: {path_res}")
         
     except Exception as e:
-        logging.error(f"Failed to generate standard residuals plot: {e}")
+        logging.error(f"Failed to generate fitted standard residuals plot: {e}")
 
     # --- 2. Normal Q-Q Plot ---
     # Purpose: Validate the assumption of normally distributed regression errors.

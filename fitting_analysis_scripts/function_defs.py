@@ -158,5 +158,7 @@ def create_rational_function(n_degree, m_degree, b0_is_zero):
         powers = np.arange(offset, len(h_coeffs) + offset)
         denominator = 1 + sum(h * (x**l) for l, h in zip(powers, h_coeffs))
         
+        denominator = np.where(np.abs(denominator) < 1e-12, 1e-12, denominator)
+        
         return numerator / denominator
     return rational_func
