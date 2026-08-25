@@ -39,8 +39,8 @@ import interactive_handlers as handlers
 
 def _worker_fit_task(args):
     """Parallel processing wrapper unpacking arguments for the core optimization solver."""
-    x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, std_x_untransformed = args
-    return _run_single_fit(x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, std_x_untransformed)
+    x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, std_x_untransformed, model_name = args
+    return _run_single_fit(x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, std_x_untransformed, model_name)
 
 def _get_normalization_params(df: pd.DataFrame) -> dict:
     """
@@ -82,6 +82,18 @@ def _apply_normalization(df: pd.DataFrame, params: dict) -> np.ndarray:
     choice = params['choice']
     r_vals = df['R'].values
     
+    # Automatic mapping to orthogonally base [-1,1] for Chebyshev models
+    if choice == 'auto_chebyshev_linear':
+        rmin, rmax = np.min(r_vals), np.max(r_vals)
+        return 2.0 * (r_vals - rmin) / (rmax - rmin) - 1.0 if (rmax - rmin) != 0 else np.zeros_like(r_vals)
+
+    elif choice == 'auto_chebyshev_log':
+        if np.any(r_vals <= 0):
+            raise ValueError("Values must be strictly positive for log-scaling.")
+        ln_r = np.log(r_vals)
+        ln_rmin, ln_rmax = np.min(ln_r), np.max(ln_r)
+        return 2.0 * (ln_r - ln_rmin) / (ln_rmax - ln_rmin) - 1.0 if (ln_rmax - ln_rmin) != 0 else np.zeros_like(r_vals)
+    
     if choice == 1:
         rmin, rmax = params['Rmin'], params['Rmax']
         return (r_vals - rmin) / (rmax - rmin) if (rmax - rmin) != 0 else np.zeros_like(r_vals)
@@ -108,12 +120,14 @@ def _ask_b0_choice() -> bool:
             return b0_is_zero
         print("Invalid input. Please enter 'y' or 'n'.")
 
-def _run_single_fit(x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, std_x_untransformed):
+def _run_single_fit(x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, std_x_untransformed, model_name: str = "Rational Function"):
     """
     Executes the Levenberg-Marquardt optimization for a specific (n, m) topology.
     Calculates comprehensive statistical diagnostics (AIC, BIC, residuals) upon convergence.
     """
-    f = function_defs.create_rational_function(n, m, b0_is_zero)
+    func_info = function_defs.get_fitting_function(model_name)
+    factory_func = func_info["function"] if func_info else function_defs.create_rational_function
+    f = factory_func(n, m, b0_is_zero)
     num_params_p = n + 1
     num_params_h = m if b0_is_zero else m + 1
     total_params = num_params_p + num_params_h
@@ -138,7 +152,7 @@ def _run_single_fit(x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, st
         ss_total = np.sum((y_data - np.mean(y_data))**2)
         
         u_fit_vec = calculate_rational_fit_uncertainty(
-            x_data, n, m, b0_is_zero, params, cov_matrix
+                x_data, n, m, b0_is_zero, params, cov_matrix, model_name=model_name
         )
 
         results = {
@@ -162,7 +176,7 @@ def _run_single_fit(x_data, y_data, std_y, n, m, b0_is_zero, x_untransformed, st
             'y_data_data': y_data,
             'std_y_data': std_y,
             'std_x_data': std_x_untransformed,
-            'fitting_function_name': 'Rational Function (Pade-like)'
+            'fitting_function_name': model_name
         }
         
         
@@ -391,6 +405,7 @@ def _run_full_rational_scan_for_subset(data_label, y_data_set, std_y_set, x_raw_
     """
     # --- 1. RECOVERING CONFIGURATION AND METADATA ---
     config_dict = kwargs.get('config_dict', kwargs.get('config')) or {}
+    model_name = config_dict.get('analysis_params', {}).get('fitting_function_name', 'Rational Function')
     current_data_dict = kwargs.get('current_data_dict', kwargs.get('current_data')) or {}
     
     norm_params = kwargs.get('norm_params')
@@ -413,7 +428,7 @@ def _run_full_rational_scan_for_subset(data_label, y_data_set, std_y_set, x_raw_
         current_max_degree = int(min(max_degree, dynamic_max_degree_by_N))
 
     # 2. Build tasks
-    tasks = [(x_norm, y_data_set, std_y_set, n, m, b0_is_zero, x_untransformed_set, std_x_set) 
+    tasks = [(x_norm, y_data_set, std_y_set, n, m, b0_is_zero, x_untransformed_set, std_x_set, model_name) 
              for n in range(2, current_max_degree - 1) 
              for m in range(2, current_max_degree - n + 1)]
     
@@ -453,7 +468,7 @@ def _run_full_rational_scan_for_subset(data_label, y_data_set, std_y_set, x_raw_
             'y_data_data': y_data_set, 
             'std_y_data': std_y_set, 
             'std_x_data': std_x_set, 
-            'fitting_function_name': 'Rational Function'
+            'fitting_function_name': model_name
         }
 
         file_base = f"{data_label}_n{n}"
@@ -489,7 +504,7 @@ def _run_full_rational_scan_for_subset(data_label, y_data_set, std_y_set, x_raw_
         'y_data_data': y_data_set, 
         'std_y_data': std_y_set, 
         'std_x_data': std_x_set, 
-        'fitting_function_name': 'Rational Function'
+        'fitting_function_name': model_name
     }
     
     _plot_final_summary(overall_best_full, best_per_n_df_aic, x_norm, data_label, output_dir, data_label, "AIC")
@@ -501,7 +516,7 @@ def _run_full_rational_scan_for_subset(data_label, y_data_set, std_y_set, x_raw_
     if config_dict:
         final_config = dict(config_dict)
         final_config['main_output_folder'] = output_dir
-        data_saver.save_global_report(overall_best_full, current_data_dict, final_config)
+        data_saver.save_global_report(overall_best_full, current_data_dict, final_config, output_dir=output_dir)
 
     plotter.generate_diagnostic_plots(overall_best_full, output_dir, f"{data_label}_best_aic", num_points)
     
@@ -537,58 +552,66 @@ def _run_fixed_rational_fit_for_variability(data_label, y_data_set, std_y_set, x
             xlabel='Normalized X', degree_label="n+m=", show_plot=True
         )
 
-def calculate_rational_fit_uncertainty(x_data, n_degree, m_degree, b0_is_zero, params, cov_matrix):
+def calculate_rational_fit_uncertainty(x_data, n_degree, m_degree, b0_is_zero, params, cov_matrix, model_name: str = "Rational Function"):
     """
     Directly evaluates GUM fit uncertainty for Rational Functions P(x)/Q(x).
+    Dynamically loads the exact model evaluator registered in function_defs.
     """
     if cov_matrix is None or np.isinf(cov_matrix).any():
         return np.zeros_like(x_data)
 
-    def rational_eval(x_val, p):
-        num_p = n_degree + 1
-        p_coeffs = p[:num_p]
-        h_coeffs = p[num_p:]
-        
-        # Numerator P(x)
-        numerator = np.polyval(p_coeffs[::-1], x_val)
-        
-        # Denominator Q(x)
-        offset = 1 if b0_is_zero else 0
-        powers = np.arange(offset, len(h_coeffs) + offset)
-        denominator = 1.0 + np.sum(h_coeffs * (x_val ** powers))
-        
-        return numerator / denominator
+    # Dynamically get model factory from function_defs (for classic Rational and Chebyshev)
+    func_info = function_defs.get_fitting_function(model_name)
+    factory_func = func_info["function"] if func_info else function_defs.create_rational_function
+    rational_eval = factory_func(n_degree, m_degree, b0_is_zero)
 
     uncertainties = []
     for x_val in x_data:
-        # Compute Jacobian vector for parameters at current x_val
-        jacobian = approx_derivative(lambda p: rational_eval(x_val, p), params)
+        # Differentiate over the '*p' parameters for the current
+        jacobian = approx_derivative(lambda p: rational_eval(x_val, *p), params)
         variance = jacobian.T @ cov_matrix @ jacobian
         uncertainties.append(np.sqrt(max(0.0, variance)))
 
     return np.array(uncertainties)
 
        
-def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_folder, max_polynomial_degree):
+def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_folder, max_polynomial_degree, model_name: str = "Rational Function"):
     """
     Primary orchestrator for the Rational Function analysis framework.
     Manages user input, builds the topological grid, dispatches processing threads, 
     and handles the interactive cross-validation loops.
     """
+    func_info = function_defs.get_fitting_function(model_name)
+    scaling_type = func_info.get('scaling_type', 'none') if func_info else 'none'
+    skip_interactive_norm = scaling_type in ['linear', 'log'] and model_name != "Rational Function"
     
-    # Step 1: Initial user setup (normalization and b0 choice)
+    # Step 1: Determine Normalization Strategy
     try:
-        norm_params = _get_normalization_params(df_original)
+        if skip_interactive_norm:
+            norm_params = {
+                'choice': f'auto_chebyshev_{scaling_type}',
+                'label': f"{model_name.replace(' ', '_')}"
+            }
+            b0_is_zero = _ask_b0_choice()
+            if not b0_is_zero: norm_params['label'] += "_b0"
+        else:
+            norm_params = _get_normalization_params(df_original)
+            b0_is_zero = _ask_b0_choice()
+            if not b0_is_zero: norm_params['label'] += "_b0"
+            
         norm_label = norm_params['label']
-        b0_is_zero = _ask_b0_choice()
-        if not b0_is_zero: norm_label += "_b0"
+        
     except Exception as e:
         print(f"\nAn error occurred during setup: {e}"); return
 
     # Step 2: Setup output directories and logger
-    rel_path = os.path.join(base_file_name_no_ext, "Rational_Function", norm_label)
+    folder_name = model_name.replace(" ", "_")
+    if norm_label == folder_name or norm_label.startswith(folder_name):
+        rel_path = os.path.join(base_file_name_no_ext, norm_label)
+    else:
+        rel_path = os.path.join(base_file_name_no_ext, folder_name, norm_label)
+        
     base_output_path = data_saver.get_global_results_path(rel_path)
-
    
     log_file_path = os.path.join(base_output_path, 'analysis_log.txt')
     logger_setup.setup_logger(log_file_path)
@@ -628,7 +651,7 @@ def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_f
         logging.info(f"Effective max combined degree for this scan is set to {current_max_degree}.")
         
         # Step 3a: Prepare tasks for parallel processing
-        tasks = [(x_current_norm, y_data, std_y, n, m, b0_is_zero, x_current_untransformed, std_x_untransformed) 
+        tasks = [(x_current_norm, y_data, std_y, n, m, b0_is_zero, x_current_untransformed, std_x_untransformed, model_name) 
                  for n in range(2, current_max_degree - 1) 
                  for m in range(2, current_max_degree - n + 1)]
         
@@ -667,7 +690,7 @@ def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_f
                                        'y_data_data': y_data, 
                                        'std_y_data': std_y, 
                                        'std_x_data': std_x_untransformed,
-                                       'fitting_function_name': 'Rational Function (Pade-like)'}
+                                       'fitting_function_name': model_name}
 
             data_saver.save_statistics(results_for_current_n, f"n={n}", num_points, file_base_for_saving, n_output_path)         
             _save_rational_parameters(results_for_current_n, num_points,file_base_for_saving, n_output_path)          
@@ -702,9 +725,16 @@ def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_f
         config_dict = {
             'base_file_name': base_file_name_no_ext,
             'main_output_folder': base_output_path,
-            'analysis_params': {'norm_params': norm_params, 
-                                'b0_is_zero': b0_is_zero, 
-                                'fitting_function_name': 'Rational Function'}
+            'mode_foldername': folder_name,
+            'data_folder': data_folder,
+            'run_analysis_func': _run_full_rational_scan_for_subset,
+            'is_special_workflow': True,
+            'analysis_params': {
+                'norm_params': norm_params,
+                'b0_is_zero': b0_is_zero,
+                'max_degree': global_max_degree,
+                'fitting_function_name': model_name
+            }
         }
         
         # Report 1: AIC Criterion
@@ -719,7 +749,7 @@ def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_f
                                         'y_data_data': y_data, 
                                         'std_y_data': std_y, 
                                         'std_x_data': std_x_untransformed,
-                                        'fitting_function_name': 'Rational Function (Pade-like)'}
+                                        'fitting_function_name': model_name}
 
         print(f"Overall Best Fit (by AIC): n={overall_best_nm_aic[0]}, m={overall_best_nm_aic[1]}")
         _plot_final_summary(overall_best_result_full_aic, best_per_n_df_aic, x_current_norm, f"{base_file_name_no_ext} ({num_points} pts)", base_output_path, dataset_label_with_pts, "AIC")
@@ -736,7 +766,7 @@ def handle_rational_function_analysis(df_original, base_file_name_no_ext, data_f
             overall_best_result_full_abs = {**overall_best_result_abs, 
                                             'x_raw_data': x_current_norm, 'x_untransformed_data': x_current_untransformed,
                                             'y_data_data': y_data, 'std_y_data': std_y, 'std_x_data': std_x_untransformed,
-                                            'fitting_function_name': 'Rational Function (Pade-like)'}
+                                            'fitting_function_name': model_name}
             
             print(f"Overall Best Fit (by Sum of Abs. Res.): n={overall_best_nm_abs[0]}, m={overall_best_nm_abs[1]}")
             _plot_final_summary(overall_best_result_full_abs, best_per_n_df_abs, x_current_norm, f"{base_file_name_no_ext} ({num_points} pts)", base_output_path, dataset_label_with_pts, "Sum of Absolute Residuals")

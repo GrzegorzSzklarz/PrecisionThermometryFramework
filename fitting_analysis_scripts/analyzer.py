@@ -26,9 +26,8 @@ from scipy.optimize import curve_fit
 import statsmodels.api as sm
 from statsmodels.stats.stattools import durbin_watson
 from statsmodels.stats.api import het_breuschpagan
+from scipy.optimize._numdiff import approx_derivative
 import fitting_analysis_scripts.function_defs as function_defs
-import fitting_analysis_scripts.plotter as plotter
-
 
 def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, std_y_set: np.ndarray,
                                       x_raw_set: np.ndarray, std_x_set: np.ndarray,
@@ -74,6 +73,7 @@ def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, s
     Returns:
         dict: A dictionary containing the results for all successfully fitted degrees, or None if analysis fails.
     """
+    import fitting_analysis_scripts.plotter as plotter
     
     print(f"\n======== Analysis for: {data_label} ({len(y_data_set)} points) ========")
 
@@ -311,3 +311,96 @@ def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, s
     
 
     return results_for_current_data
+    
+def compute_fit_uncertainty_and_polynomial(res: dict, config: dict = None, max_deg: int = 5):
+    """
+    Evaluates point-by-point expanded fit uncertainty U_fit (k=2, mK) at measurement nodes,
+    filters severe uncertainty outliers using IQR bounds, and fits a smoothed polynomial 
+    approximation U_fit(T) = u0 + u1*T + ... + u5*T^5 [mK].
+
+    Returns:
+        tuple: (u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK)
+               or (None, None, None, None) if computation is not feasible.
+    """
+    import fitting_analysis_scripts.plotter as plotter
+    
+    cov_matrix = res.get('cov_matrix')
+    params = res.get('params')
+    y_vals = res.get('y_data_data', res.get('y_raw', np.array([])))  # Temperature T [K]
+    x_norm = res.get('x_raw_data', np.array([]))
+
+    if cov_matrix is None or params is None or len(y_vals) == 0 or len(x_norm) == 0:
+        return None, None, None, None
+
+    if np.isinf(cov_matrix).any():
+        return None, None, None, None
+
+    try:
+        func_name = res.get('fitting_function_name') or (config.get('analysis_params', {}).get('fitting_function_name') if config else None) or ""
+        is_rational = 'n' in res or "Rational" in str(func_name)
+
+        # 1. Dynamic Model Evaluation (Handles standard polynomials, Padé, and Chebyshev variants)
+        func_info = function_defs.get_fitting_function(func_name) if func_name else None
+
+        if is_rational:
+            n_deg = int(res.get('n', 1))
+            m_deg = int(res.get('m', 1))
+            b0_zero = res.get('b0_is_zero', True)
+
+            if func_info and "function" in func_info:
+                factory = func_info["function"]
+                eval_func = factory(n_deg, m_deg, b0_zero)
+            else:
+                eval_func = function_defs.create_rational_function(n_deg, m_deg, b0_zero)
+
+            def eval_model(xv, p):
+                return eval_func(xv, *p)
+        else:
+            fitting_func = func_info["function"] if func_info else None
+            if fitting_func is None:
+                return None, None, None, None
+
+            def eval_model(xv, p):
+                return fitting_func(xv, *p)
+
+        # 2. Sort nodes by Temperature T ascending to ensure monotonic profile
+        sort_idx = np.argsort(y_vals)
+        y_vals_sorted = np.array(y_vals)[sort_idx]
+        x_norm_sorted = np.array(x_norm)[sort_idx]
+
+        # 3. Compute exact expanded fit uncertainty U_fit (k=2, mK) at sorted nodes
+        u_nodes_list = []
+        for xv in x_norm_sorted:
+            J = approx_derivative(lambda p: eval_model(xv, p), params)
+            var = J.T @ cov_matrix @ J
+            u_nodes_list.append(np.sqrt(max(0.0, var)) * 2000.0)  # k=2, K -> mK
+
+        u_nodes_mK = np.array(u_nodes_list)
+        U_avg_k2_mK = float(np.mean(u_nodes_mK))
+        U_max_k2_mK = float(np.max(u_nodes_mK))
+
+        # 4. Filter severe uncertainty spikes using Interquartile Range (IQR) criterion
+        q25, q75 = np.percentile(u_nodes_mK, [25, 75])
+        iqr = q75 - q25
+        upper_bound = q75 + 1.75 * iqr
+        mask = u_nodes_mK <= upper_bound
+
+        # Fallback to full set if too many nodes are masked
+        y_filt = y_vals_sorted[mask] if np.sum(mask) >= 4 else y_vals_sorted
+        u_filt = u_nodes_mK[mask] if np.sum(mask) >= 4 else u_nodes_mK
+
+        # 5. Fit smoothed polynomial model to filtered uncertainty profile U_fit(T)
+        poly_deg = min(max_deg, len(y_filt) - 1)
+        if poly_deg < 0:
+            u_poly_coeffs = np.zeros(max_deg + 1)
+        else:
+            # Polyfit coefficients ordered from u0 (constant term) to u5 (T^5)
+            fit_coeffs = np.polyfit(y_filt, u_filt, deg=poly_deg)[::-1]
+            u_poly_coeffs = np.zeros(max_deg + 1)
+            u_poly_coeffs[:len(fit_coeffs)] = fit_coeffs
+
+        return u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK
+
+    except Exception as e:
+        logging.warning(f"Could not compute uncertainty polynomial model: {e}")
+        return None, None, None, None

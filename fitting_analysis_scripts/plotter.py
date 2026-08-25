@@ -21,7 +21,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 from pathlib import Path
-from fitting_analysis_scripts.data_saver import get_global_results_path, _compute_fit_uncertainty_and_polynomial
+from fitting_analysis_scripts.data_saver import get_global_results_path
+from fitting_analysis_scripts.analyzer import compute_fit_uncertainty_and_polynomial
 from scipy.optimize._numdiff import approx_derivative
 import fitting_analysis_scripts.function_defs as function_defs
 
@@ -70,15 +71,15 @@ def generate_diagnostic_plots(best_result: dict, output_dir: str, file_base_name
             
         # Baseline reference
         ax_res.axhline(y=0, color='r', linestyle='--', label='Zero Deviation Baseline', zorder=2)
-
-    # 2. Fit Uncertainty Bands (Identical to CSV report model with IQR filtering)
-        u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK = _compute_fit_uncertainty_and_polynomial(best_result, max_deg=5)
+    
+        # 2. Fit Uncertainty Bands (Smooth Polynomial Model with IQR outlier filtering)
+        u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK = compute_fit_uncertainty_and_polynomial(best_result, max_deg=5)
 
         if u_poly_coeffs is not None:
-            # Evaluate smooth profile on dense mesh (u_poly_coeffs: u0..u5, so reverse for polyval)
+            # Create a dense evaluation grid across the physical temperature range
             x_dense_T = np.linspace(np.min(x_plot), np.max(x_plot), 500)
             
-            # Expanded uncertainty U_fit(T) [mK] (k=2)
+            # Evaluate smooth 5th-degree polynomial curve U_fit(T) [mK] (k=2)
             U_fit_smooth_mK = np.maximum(0.0, np.polyval(u_poly_coeffs[::-1], x_dense_T))
             # Standard uncertainty u_fit(T) [mK] (k=1)
             u_fit_smooth_mK = U_fit_smooth_mK / 2.0
@@ -87,14 +88,14 @@ def generate_diagnostic_plots(best_result: dict, output_dir: str, file_base_name
             ax_res.fill_between(
                 x_dense_T, -U_fit_smooth_mK, U_fit_smooth_mK, 
                 color='red', alpha=0.12, 
-                label=rf'Expanded Uncertainty Band $U_{{\mathrm{{fit}}}}$ ($k=2$, mK)', zorder=1
+                label=r'Expanded Uncertainty Band $U_{{\mathrm{{fit}}}}$ ($k=2$, mK)', zorder=1
             )
 
             # Inner Shaded Band: Standard Fit Uncertainty (k = 1)
             ax_res.fill_between(
                 x_dense_T, -u_fit_smooth_mK, u_fit_smooth_mK, 
                 color='red', alpha=0.25, 
-                label=rf'Standard Uncertainty Band $u_{{\mathrm{{fit}}}}$ ($k=1$, mK)', zorder=1
+                label=r'Standard Uncertainty Band $u_{{\mathrm{{fit}}}}$ ($k=1$, mK)', zorder=1
             )
             
             # Continuous Envelope Lines

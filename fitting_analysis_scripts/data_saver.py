@@ -22,6 +22,7 @@ import numpy as np
 import os
 import logging
 import fitting_analysis_scripts.function_defs as function_defs
+from fitting_analysis_scripts.analyzer import compute_fit_uncertainty_and_polynomial
 from scipy.optimize._numdiff import approx_derivative
 
 # --- METADATA TRANSLATION CONSTANTS ---
@@ -54,6 +55,7 @@ def get_global_results_path(relative_path: str) -> str:
     directory structure at the project root. Automatically creates the 
     target directory tree if it does not exist.
     """
+        
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
     global_results_base = os.path.join(project_root, 'results')
@@ -97,93 +99,7 @@ def calculate_fit_uncertainty_vectorized(x_data, fitting_func, params, cov_matri
         uncertainties.append(np.sqrt(max(0.0, variance)))
         
     return np.array(uncertainties)
-
-
-def _compute_fit_uncertainty_and_polynomial(res: dict, config: dict = None, max_deg: int = 5):
-    """
-    Evaluates point-by-point expanded fit uncertainty U_fit (k=2, mK) at measurement nodes,
-    filters severe uncertainty outliers using IQR bounds, and fits a smoothed polynomial 
-    approximation U_fit(T) = u0 + u1*T + ... + u5*T^5 [mK].
-
-    Returns:
-        tuple: (u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK)
-               or (None, None, None, None) if computation is not feasible.
-    """
-    cov_matrix = res.get('cov_matrix')
-    params = res.get('params')
-    y_vals = res.get('y_data_data', res.get('y_raw', np.array([])))  # Temperature T [K]
-    x_norm = res.get('x_raw_data', np.array([]))
-
-    if cov_matrix is None or params is None or len(y_vals) == 0 or len(x_norm) == 0:
-        return None, None, None, None
-
-    if np.isinf(cov_matrix).any():
-        return None, None, None, None
-
-    try:
-        func_name = res.get('fitting_function_name') or (config.get('analysis_params', {}).get('fitting_function_name') if config else None) or ""
-        is_rational = 'n' in res or "Rational" in str(func_name)
-
-        if is_rational:
-            n_deg = int(res.get('n', 1))
-            m_deg = int(res.get('m', 1))
-            b0_zero = res.get('b0_is_zero', True)
-
-            def eval_model(xv, p):
-                num_p = n_deg + 1
-                p_coeffs, h_coeffs = p[:num_p], p[num_p:]
-                numerator = np.polyval(p_coeffs[::-1], xv)
-                offset = 1 if b0_zero else 0
-                powers = np.arange(offset, len(h_coeffs) + offset)
-                denominator = 1.0 + np.sum(h_coeffs * (xv ** powers))
-                return numerator / denominator
-        else:
-            func_info = function_defs.get_fitting_function(func_name)
-            fitting_func = func_info["function"] if func_info else None
-            if fitting_func is None:
-                return None, None, None, None
-
-            def eval_model(xv, p):
-                return fitting_func(xv, *p)
-
-        # 1. Compute exact expanded fit uncertainty U_fit (k=2, mK) at nodal points
-        u_nodes_list = []
-        for xv in x_norm:
-            J = approx_derivative(lambda p: eval_model(xv, p), params)
-            var = J.T @ cov_matrix @ J
-            u_nodes_list.append(np.sqrt(max(0.0, var)) * 2000.0)
-
-        u_nodes_mK = np.array(u_nodes_list)
-        U_avg_k2_mK = float(np.mean(u_nodes_mK))
-        U_max_k2_mK = float(np.max(u_nodes_mK))
-
-        # 2. Filter severe uncertainty outliers using Interquartile Range (IQR) criterion
-        q25, q75 = np.percentile(u_nodes_mK, [25, 75])
-        iqr = q75 - q25
-        upper_bound = q75 + 1.5 * iqr
-        mask = u_nodes_mK <= upper_bound
-
-        # Fallback to full set if too many nodes are masked
-        y_filt = y_vals[mask] if np.sum(mask) >= 4 else y_vals
-        u_filt = u_nodes_mK[mask] if np.sum(mask) >= 4 else u_nodes_mK
-
-        # 3. Fit smoothed polynomial model to filtered uncertainty profile U_fit(T)
-        poly_deg = min(max_deg, len(y_filt) - 1)
-        if poly_deg < 0:
-            u_poly_coeffs = np.zeros(max_deg + 1)
-        else:
-            # Polyfit coefficients ordered from u0 (lowest degree) to u5 (highest degree)
-            fit_coeffs = np.polyfit(y_filt, u_filt, deg=poly_deg)[::-1]
-            u_poly_coeffs = np.zeros(max_deg + 1)
-            u_poly_coeffs[:len(fit_coeffs)] = fit_coeffs
-
-        return u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK
-
-    except Exception as e:
-        logging.warning(f"Could not compute uncertainty polynomial model: {e}")
-        return None, None, None, None
-
-
+    
 def save_statistics(all_results: dict, data_label: str, num_points: int, file_base_name: str, output_dir: str):
     """
     Saves fitting statistics for all tested degrees to a single CSV file.
@@ -366,7 +282,7 @@ def save_jacobian_covariance_report(results_dict: dict, file_base_name: str, out
             else:
                 f.write(";Covariance Matrix: N/A (Singular or ill-conditioned fit)\n")
 
-            _, u_poly_coeffs, _, _ = _compute_fit_uncertainty_and_polynomial(result, max_deg=5)
+            _, u_poly_coeffs, _, _ = compute_fit_uncertainty_and_polynomial(result, max_deg=5)
 
             if u_poly_coeffs is not None:
                 f.write("\n;--- FIT UNCERTAINTY POLYNOMIAL MODEL U_fit(T) [mK] ---\n")
@@ -450,7 +366,7 @@ def _write_fit_core_logic(f, res, config, section_label, is_piecewise):
     cov_matrix = res.get('cov_matrix')
     params = res.get('params')
 
-    u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK = _compute_fit_uncertainty_and_polynomial(res, config, max_deg=5)
+    u_nodes_mK, u_poly_coeffs, U_avg_k2_mK, U_max_k2_mK = compute_fit_uncertainty_and_polynomial(res, config, max_deg=5)
 
     if U_avg_k2_mK is not None:
         f.write(f"{prefix}FIT_UNCERTAINTY_EXP_AVG_K2_MK,{U_avg_k2_mK:.4f},mK,Mean expanded fit uncertainty U(T) (k=2)\n")

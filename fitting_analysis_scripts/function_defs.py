@@ -10,12 +10,13 @@ Architecture:
 -------------
 - Registry: A central dictionary stores function pointers and metadata.
 - Decorator: '@register_fitting_function' handles metadata assignment.
-- Kernels: Unified mathematical implementations (Polynomial, Hybrid, etc.) 
-  to minimize redundancy.
+- Kernels: Unified mathematical implementations (Polynomial, Chebyshev, Hybrid, Rational) 
+  to minimize redundancy and ensure numerical stability.
 """
 
 import numpy as np
 from numpy.polynomial.polynomial import polyval
+from numpy.polynomial.chebyshev import chebval
 
 # A private dictionary that serves as the registry for all fitting functions.
 _fitting_functions = {}
@@ -31,9 +32,7 @@ def register_fitting_function(name: str, scaling_type: str = 'none', is_polynomi
         param_names (list): Default labels for non-polynomial parameters.
         is_special_workflow (bool): If True, delegates to a custom handler (e.g., Rational).
     """
-    
     def decorator(func):
-        # Store the function and its metadata in the registry dictionary.
         _fitting_functions[name] = {
             "function": func,
             "scaling_type": scaling_type,
@@ -57,7 +56,7 @@ def list_fitting_functions() -> dict:
 def get_param_names_for_function(function_name: str, num_params: int = None) -> list:
     """
     Generates descriptive parameter names for results reporting.
-    Supports standard polynomials (A0, A1...), hybrid models, and static models.
+    Supports standard polynomials (A0, A1...), Chebyshev polynomials, hybrid models, and static models.
     """
     func_info = get_fitting_function(function_name)
     if not func_info:
@@ -69,27 +68,30 @@ def get_param_names_for_function(function_name: str, num_params: int = None) -> 
         poly_names = [f"A{i}" for i in range(poly_count)]
         return poly_names + ['Amplitude', 'Frequency', 'Phase']
     
-    # Standard Polynomials: A0, A1, A2...
+    # Standard & Chebyshev Polynomials: A0, A1, A2...
     if func_info["is_polynomial"]:
         return [f"A{i}" for i in range(num_params or 0)]
     
     # Static Parameter Models (e.g., Exponential)
     return func_info.get("param_names") or [f"Param{i}" for i in range(num_params or 0)]
 
-# --- SHARED MATHEMATICAL KERNELS (DRY) ---
+# --- SHARED MATHEMATICAL KERNELS ---
 
 def _evaluate_polynomial(x, params):
-    """
-    Efficiently evaluates a polynomial in ascending order:
-    Y = A0 + A1*x + A2*x^2 + ...
-    """
-    # np.polynomial.polynomial.polyval is faster and more stable for ascending coeffs
+    """Evaluates a standard monomial polynomial series in ascending order."""
     return polyval(x, params)
 
+def _evaluate_chebyshev(x, params):
+    """
+    Evaluates a Chebyshev polynomial series in ascending order:
+    Y = C0*T0(x) + C1*T1(x) + C2*T2(x) + ...
+    Expects x scaled to the domain [-1, 1].
+    """
+    return chebval(x, params)
+
 def _evaluate_hybrid_sine(x, params):
-    """Mathematical kernel for Polynomial + Sine wave models."""
+    """Mathematical kernel for Monomial Polynomial + Sine wave models."""
     if len(params) < 4:
-        # Minimum: A0 (offset) + Amp + Freq + Phase
         poly_params = [params[0]]
         sine_params = params[1:]
     else:
@@ -99,10 +101,48 @@ def _evaluate_hybrid_sine(x, params):
     amp, freq, phase = sine_params
     return _evaluate_polynomial(x, poly_params) + amp * np.sin(freq * x + phase)
 
+def _evaluate_hybrid_sine_chebyshev(x, params):
+    """Mathematical kernel for Chebyshev Polynomial + Sine wave models."""
+    if len(params) < 4:
+        poly_params = [params[0]]
+        sine_params = params[1:]
+    else:
+        poly_params = params[:-3]
+        sine_params = params[-3:]
+        
+    amp, freq, phase = sine_params
+    return _evaluate_chebyshev(x, poly_params) + amp * np.sin(freq * x + phase)
+
+def _evaluate_chebyshev_rational(x, n_degree, m_degree, b0_is_zero, params):
+    """
+    Core kernel for Chebyshev Rational functions: P_n(x) / Q_m(x)
+    Numerator and denominator are evaluated in Chebyshev basis T_i(x) on [-1, 1].
+    """
+    num_p = n_degree + 1
+    p_coeffs = params[:num_p]
+    h_coeffs = params[num_p:]
+    
+    # Numerator P_n(x) in Chebyshev basis
+    numerator = _evaluate_chebyshev(x, p_coeffs)
+    
+    # Denominator Q_m(x) in Chebyshev basis: 1 + sum(h_i * T_{i+offset}(x))
+    offset = 1 if b0_is_zero else 0
+    denominator = np.ones_like(x, dtype=float)
+    
+    for idx, h in enumerate(h_coeffs):
+        deg = idx + offset
+        basis = [0.0] * (deg + 1)
+        basis[deg] = 1.0
+        denominator += h * chebval(x, basis)
+        
+    denominator = np.where(np.abs(denominator) < 1e-12, 1e-12, denominator)
+    return numerator / denominator
+
 # --- MODEL REGISTRATIONS ---
 
-# 1. Standard Polynomials
-# Note: Math is identical for all three; analyzer handles the 'x' preparation based on scaling_type.
+# =========================================================================
+# 1. STANDARD MONOMIAL POLYNOMIALS
+# =========================================================================
 
 @register_fitting_function("Polynomial N-th degree", scaling_type='none', is_polynomial=True)
 def polynomial_standard(x, *params):
@@ -116,34 +156,40 @@ def polynomial_linear_scaled(x, *params):
 def polynomial_log_scaled(x, *params):
     return _evaluate_polynomial(x, params)
 
-# 2. Hybrid Polynomial + Sine Models
+# =========================================================================
+# 2. HYBRID POLYNOMIAL + SINE MODELS
+# =========================================================================
 
-@register_fitting_function("Polynomial N-th degree + Sine", scaling_type='none', is_polynomial=True)
-def hybrid_sine_raw(x, *params):
-    return _evaluate_hybrid_sine(x, params)
+# @register_fitting_function("Polynomial N-th degree + Sine", scaling_type='none', is_polynomial=True)
+# def hybrid_sine_raw(x, *params):
+#     return _evaluate_hybrid_sine(x, params)
 
-@register_fitting_function("Z-function (N-th degree polynomial) + Sine", scaling_type='linear', is_polynomial=True)
-def hybrid_sine_linear_scaled(x, *params):
-    return _evaluate_hybrid_sine(x, params)
+# @register_fitting_function("Z-function (N-th degree polynomial) + Sine", scaling_type='linear', is_polynomial=True)
+# def hybrid_sine_linear_scaled(x, *params):
+#     return _evaluate_hybrid_sine(x, params)
 
-@register_fitting_function("Log-scaled Z-function (N-th degree polynomial) + Sine", scaling_type='log', is_polynomial=True)
-def hybrid_sine_log_scaled(x, *params):
-    return _evaluate_hybrid_sine(x, params)
+# @register_fitting_function("Log-scaled Z-function (N-th degree polynomial) + Sine", scaling_type='log', is_polynomial=True)
+# def hybrid_sine_log_scaled(x, *params):
+#     return _evaluate_hybrid_sine(x, params)
 
-# 3. Static Parameter Models
+# =========================================================================
+# 3. STATIC PARAMETER MODELS
+# =========================================================================
 
-@register_fitting_function("Exponential function", param_names=['A', 'k', 'C'])
-def exponential_function(x, A, k, C):
-    """Standard Exponential: Y = A * exp(k * x) + C"""
-    return A * np.exp(k * x) + C
+# @register_fitting_function("Exponential function", param_names=['A', 'k', 'C'])
+# def exponential_function(x, A, k, C):
+#     """Standard Exponential: Y = A * exp(k * x) + C"""
+#     return A * np.exp(k * x) + C
 
-# 4. Special Workflows
+# =========================================================================
+# 4. STANDARD MONOMIAL RATIONAL MODELS (INTERACTIVE NORMALIZATION)
+# =========================================================================
 
 @register_fitting_function("Rational Function", is_special_workflow=True)
 def create_rational_function(n_degree, m_degree, b0_is_zero):
     """
-    Factory function for Rational/Pade models.
-    Structure: P(x, n) / Q(x, m)
+    Factory function for Standard Rational/Padé models.
+    Triggers the interactive normalization CLI menu in rational_function_handler.py.
     """
     def rational_func(x, *params):
         num_p = n_degree + 1
@@ -151,14 +197,51 @@ def create_rational_function(n_degree, m_degree, b0_is_zero):
         h_coeffs = params[num_p:]
         
         numerator = _evaluate_polynomial(x, p_coeffs)
-        
-        # Denominator normalization: 1 + sum(h*x^l)
-        # Shift powers if b0_is_zero is required
         offset = 1 if b0_is_zero else 0
         powers = np.arange(offset, len(h_coeffs) + offset)
-        denominator = 1 + sum(h * (x**l) for l, h in zip(powers, h_coeffs))
-        
+        denominator = 1.0 + sum(h * (x**l) for l, h in zip(powers, h_coeffs))
         denominator = np.where(np.abs(denominator) < 1e-12, 1e-12, denominator)
         
         return numerator / denominator
     return rational_func
+
+# =========================================================================
+# 5. CHEBYSHEV MODELS (POLYNOMIAL, HYBRID & AUTOMATIC RATIONALS)
+# =========================================================================
+
+# Standard & Log-scaled Chebyshev Polynomials
+@register_fitting_function("Chebyshev N-th degree polynomial", scaling_type='linear', is_polynomial=True)
+def polynomial_chebyshev_linear(x, *params):
+    """Standard Chebyshev polynomial fit using linear [-1, 1] scaling."""
+    return _evaluate_chebyshev(x, params)
+
+@register_fitting_function("Log-scaled Chebyshev N-th degree", scaling_type='log', is_polynomial=True)
+def polynomial_chebyshev_log(x_norm, *params):
+    """Chebyshev polynomial fit on logarithmically scaled data mapped to [-1, 1]."""
+    return _evaluate_chebyshev(x_norm, params)
+
+# Hybrid Chebyshev Polynomial + Sine Models
+# @register_fitting_function("Chebyshev N-th degree polynomial + Sine", scaling_type='linear', is_polynomial=True)
+# def hybrid_sine_chebyshev_linear(x, *params):
+#     """Hybrid Chebyshev polynomial + Sine model using linear [-1, 1] scaling."""
+#     return _evaluate_hybrid_sine_chebyshev(x, params)
+
+# @register_fitting_function("Log-scaled Chebyshev N-th degree + Sine", scaling_type='log', is_polynomial=True)
+# def hybrid_sine_chebyshev_log(x_norm, *params):
+#     """Hybrid Chebyshev polynomial + Sine model on logarithmically scaled data [-1, 1]."""
+#     return _evaluate_hybrid_sine_chebyshev(x_norm, params)
+
+# Chebyshev Rational Functions (Automatic Scaling, No interactive CLI menu)
+@register_fitting_function("Chebyshev Rational Function", scaling_type='linear', is_special_workflow=True)
+def create_chebyshev_rational_linear(n_degree, m_degree, b0_is_zero):
+    """Factory function for Chebyshev Rational models using linear [-1, 1] scaling."""
+    def chebyshev_rational_func(x, *params):
+        return _evaluate_chebyshev_rational(x, n_degree, m_degree, b0_is_zero, params)
+    return chebyshev_rational_func
+
+@register_fitting_function("Log-scaled Chebyshev Rational Function", scaling_type='log', is_special_workflow=True)
+def create_chebyshev_rational_log(n_degree, m_degree, b0_is_zero):
+    """Factory function for Chebyshev Rational models using logarithmic [-1, 1] scaling."""
+    def chebyshev_rational_func(x, *params):
+        return _evaluate_chebyshev_rational(x, n_degree, m_degree, b0_is_zero, params)
+    return chebyshev_rational_func

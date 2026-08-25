@@ -45,7 +45,7 @@ Step 6: Interactive dataset manipulation (Cleaning, Splitting, or Combining).
 
 Author: g.szklarz
 Project: Direk-T Calibration Framework
-Date: 2026-03-08
+Date: 2026-08-26
 """
 
 import os
@@ -164,7 +164,8 @@ if __name__ == "__main__":
                 df_original=df_original,
                 base_file_name_no_ext=base_file_name_no_ext,
                 data_folder=data_folder,
-                max_polynomial_degree=current_max_degree 
+                max_polynomial_degree=current_max_degree,
+                model_name=selected_mode
             )
             
         # CASE B: ITS-90 PRT CALIBRATION WORKFLOW
