@@ -22,7 +22,8 @@ Key Methodologies:
 import math
 import logging
 import numpy as np
-from scipy.optimize import curve_fit
+from scipy.optimize import curve_fit, OptimizeWarning
+import warnings
 import statsmodels.api as sm
 from statsmodels.stats.stattools import durbin_watson
 from statsmodels.stats.api import het_breuschpagan
@@ -140,7 +141,7 @@ def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, s
                 num_poly_terms = degree_label if "Sine" not in fitting_function_name else degree_label + 1
                 current_initial_guess = [np.mean(y_data_set)] + [0.1] * num_poly_terms
                 if "Sine" in fitting_function_name:
-                    current_initial_guess += [0,2, 0.1, 0.2] # Amplitude, Freq, Phase
+                    current_initial_guess += [0.2, 0.1, 0.2]  # Amplitude, Freq, Phase
             else:
                 default_non_poly_initial_guesses = {"exponential": [1.0, -0.1, 1.0], "linear": [1.0, 0.0]}
                 current_initial_guess = default_non_poly_initial_guesses.get(fitting_function_name, [])
@@ -148,13 +149,14 @@ def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, s
             if not current_initial_guess or num_observations_set < len(current_initial_guess):
                 continue
 
-            # Non-linear Least Squares using Levenberg-Marquardt or TRF
-            params, cov_matrix = curve_fit(
-                f=fitting_func, xdata=x_data_for_fit, ydata=y_data_set,
-                p0=current_initial_guess, sigma=sigma_for_fit_and_chi2, 
-                absolute_sigma=True, maxfev=10000
-            )
-            
+            # Non-linear Least Squares using Levenberg-Marquardt or TRF with warning redirection
+            with warnings.catch_warnings():
+                warnings.simplefilter("error", OptimizeWarning)
+                params, cov_matrix = curve_fit(
+                    f=fitting_func, xdata=x_data_for_fit, ydata=y_data_set,
+                    p0=current_initial_guess, sigma=sigma_for_fit_and_chi2, 
+                    absolute_sigma=True, maxfev=10000
+                )
             # --- Goodness-of-Fit Computation ---
             y_fit_set = fitting_func(x_data_for_fit, *params)
             residuals_set = y_data_set - y_fit_set
@@ -235,8 +237,8 @@ def perform_analysis_and_save_results(data_label: str, y_data_set: np.ndarray, s
             result_dict.update(adv_stats)
             results_for_current_data[degree_label] = result_dict
             
-        except (RuntimeError, Exception) as e:
-            logging.error(f"Fit failed for degree {degree_label}: {e}")
+        except (OptimizeWarning, RuntimeError, Exception) as e:
+            logging.warning(f"Fit failed for degree {degree_label}: Covariance or optimization issue ({e})")
             continue
             
     if not results_for_current_data:

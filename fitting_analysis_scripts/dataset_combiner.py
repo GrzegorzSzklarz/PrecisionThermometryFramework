@@ -32,6 +32,7 @@ from scipy.optimize import OptimizeWarning
 from statsmodels.stats.stattools import durbin_watson
 from statsmodels.stats.api import het_breuschpagan
 import fitting_analysis_scripts.data_loader as data_loader
+import fitting_analysis_scripts.data_saver as data_saver
 
 # =============================================================================
 # --- [SECTION 1: DATA MANIPULATION & TOPOLOGY SETUP] ---
@@ -264,8 +265,7 @@ def run_intelligent_piecewise_analysis(current_data: dict, config: dict) -> tupl
         all_stats_list.append(seg_dict)
 
     if results:
-        from fitting_analysis_scripts.dataset_combiner import save_stitched_dataset_to_csv
-        save_stitched_dataset_to_csv(results, config)
+        data_saver.save_stitched_dataset_to_csv(results, config)
 
     return results, all_stats_list
 
@@ -438,47 +438,3 @@ def find_optimal_knot_with_fallback(res1, res2, t_split, current_data):
 
     logging.info(f"Knot Optimized: Shift = {(opt_r - r_phys_measured):.6f} Ohm")
     return b_f1, b_f2, opt_r
-
-# =============================================================================
-# --- [SECTION 3: DATA EXPORT] ---
-# =============================================================================
-
-def save_stitched_dataset_to_csv(piecewise_results: list, config: dict):
-    """
-    Compiles the constrained mathematical vectors from all distinct segments 
-    into a single, continuous DataFrame and exports it to a system CSV report.
-    """
-    base_dir = config['main_output_folder']
-    model_name = config.get('analysis_params', {}).get('model_type', 'Piecewise_Model')
-    
-    all_data = []
-    
-    for i, res in enumerate(piecewise_results):
-        t_meas = res.get('y_data_data')
-        r_meas = res.get('x_untransformed_data')
-        t_fit = res.get('y_fit')
-        res_k = res.get('residuals')
-        
-        if t_meas is None or r_meas is None or t_fit is None:
-            continue
-            
-        res_mk = res_k * 1000.0
-        
-        for t, r, tf, rk, rmk in zip(t_meas, r_meas, t_fit, res_k, res_mk):
-            all_data.append({
-                'Segment': i + 1,
-                'T_measured_K': t,
-                'R_measured_Ohm': r,
-                'T_fitted_K': tf,
-                'Residual_K': rk,
-                'Residual_mK': rmk
-            })
-            
-    if all_data:
-        df = pd.DataFrame(all_data)
-        df.sort_values(by='T_measured_K', inplace=True)
-        df.reset_index(drop=True, inplace=True)
-        
-        out_path = os.path.join(base_dir, f"{model_name}_stitched_full_data.csv")
-        df.to_csv(out_path, sep=';', index=False, float_format="%.8f")
-        logging.info(f"Stitched dataset exported to: {out_path}")

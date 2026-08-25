@@ -511,3 +511,51 @@ def save_piecewise_results(piecewise_results: list, current_data: dict, config: 
         logging.info(f"Piecewise report saved: {file_path}")
     except Exception as e:
         logging.error(f"Failed to save piecewise report: {e}")
+        
+def save_stitched_dataset_to_csv(piecewise_results: list, config: dict):
+    """
+    Compiles the constrained mathematical vectors from all distinct segments 
+    into a single, continuous DataFrame and exports it to a system CSV report,
+    including expanded (k=2) fit uncertainties in mK.
+    """
+    base_dir = config.get('main_output_folder', 'results')
+    model_name = config.get('analysis_params', {}).get('model_type', 'Piecewise_Model')
+    
+    all_data = []
+    
+    for i, res in enumerate(piecewise_results):
+        t_meas = res.get('y_data_data')
+        r_meas = res.get('x_untransformed_data')
+        t_fit = res.get('y_fit')
+        res_k = res.get('residuals')
+        u_fit_vec = res.get('u_fit_vector')  # Standard uncertainty vector [K] (k=1)
+        
+        if t_meas is None or r_meas is None or t_fit is None:
+            continue
+            
+        res_mk = res_k * 1000.0
+        
+        # Calculate expanded uncertainty U_fit in mK (k=2)
+        if u_fit_vec is not None and len(u_fit_vec) == len(t_meas):
+            U_k2_mK = np.array(u_fit_vec) * 2000.0  # k=2, K -> mK
+        else:
+            U_k2_mK = np.full(len(t_meas), np.nan)
+        
+        for idx in range(len(t_meas)):
+            all_data.append({
+                'Segment': i + 1,
+                'T_measured_K': t_meas[idx],
+                'R_measured_Ohm': r_meas[idx],
+                'T_fitted_K': t_fit[idx],
+                'U_fit_expanded_k2_mK': U_k2_mK[idx],
+                'Residual_mK': res_mk[idx]
+            })
+            
+    if all_data:
+        df = pd.DataFrame(all_data)
+        df.sort_values(by='T_measured_K', inplace=True)
+        df.reset_index(drop=True, inplace=True)
+        
+        out_path = os.path.join(base_dir, f"{model_name}_stitched_full_data.csv")
+        df.to_csv(out_path, sep=';', index=False, float_format="%.8f")
+        logging.info(f"Stitched dataset with uncertainty exported to: {out_path}")
